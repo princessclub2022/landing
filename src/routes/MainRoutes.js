@@ -41,88 +41,40 @@ const MainRoutes = (props) => {
 
     return (
         <>
-            <Header acceptedLang={acceptedLang} locale={locale}/>
-            <HelpInputSection locale={locale}/>
-            <Switch>
-                <Redirect exact strict from={`/en/`} to={`/`}/>
-                <Redirect exact strict from={`/en/:slug/`} to={`/:slug/`}/>
+            {/*<Header acceptedLang={acceptedLang} locale={locale}/>*/}
+            {/*<HelpInputSection locale={locale}/>*/}
+            {/*<Switch>*/}
+            {/*    <Redirect exact strict from={`/en/`} to={`/`}/>*/}
+            {/*    <Redirect exact strict from={`/en/:slug/`} to={`/:slug/`}/>*/}
 
 
 
-                {/*delete later*/}
-                <Redirect exact strict from={`/ru/`} to={`/`}/>
-                <Redirect exact strict from={`/ru`} to={`/`}/>
-                <Redirect exact strict from={`/ru/:slug`} to={`/:slug/`}/>
-                <Redirect exact strict from={`/ru/:slug/`} to={`/:slug/`}/>
+            {/*    /!*delete later*!/*/}
+            {/*    <Redirect exact strict from={`/ru/`} to={`/`}/>*/}
+            {/*    <Redirect exact strict from={`/ru`} to={`/`}/>*/}
+            {/*    <Redirect exact strict from={`/ru/:slug`} to={`/:slug/`}/>*/}
+            {/*    <Redirect exact strict from={`/ru/:slug/`} to={`/:slug/`}/>*/}
 
 
-                {/*//without slash at the end*/}
-                <Redirect exact strict from={`/en`} to={`/`}/>
-                <Redirect exact strict from={`/en/:slug`} to={`/:slug/`}/>
-                <Redirect exact strict from={`/:slug`} to={`/:slug/`}/>
-                <Redirect exact strict from={`/${locale}`} to={`/${locale}/`}/>
-                <Redirect exact strict from={`/${locale}/:slug`} to={`/${locale}/:slug/`}/>
+
+            {/*    <Redirect exact strict from={`/en`} to={`/`}/>*/}
+            {/*    <Redirect exact strict from={`/en/:slug`} to={`/:slug/`}/>*/}
+            {/*    <Redirect exact strict from={`/:slug`} to={`/:slug/`}/>*/}
+            {/*    <Redirect exact strict from={`/${locale}`} to={`/${locale}/`}/>*/}
+            {/*    <Redirect exact strict from={`/${locale}/:slug`} to={`/${locale}/:slug/`}/>*/}
 
 
-                <Route exact strict path={`${locale === "en" ? "" : `/${locale}`}/:slug/`}
-                       render={() => <PageWrapper locale={locale} singleCategory={singleCategory}/>}/>
-                <Route exact strict path={`${locale === "en" ? "" : `/${locale}`}/`}
-                       render={() => <MainPage locale={locale}/>}/>
+            {/*    <Route exact strict path={`${locale === "en" ? "" : `/${locale}`}/:slug/`}*/}
+            {/*           render={() => <PageWrapper locale={locale} singleCategory={singleCategory}/>}/>*/}
+            {/*    <Route exact strict path={`${locale === "en" ? "" : `/${locale}`}/`}*/}
+            {/*           render={() => <MainPage locale={locale}/>}/>*/}
 
-                <Route exact strict path={`/*`} render={() => <NotFound locale={locale}/>}/>
-            </Switch>
-            <Footer locale={locale}/>
+                <Route exact strict path={`/`} render={() => <NotFound />}/>
+            {/*</Switch>*/}
+            {/*<Footer locale={locale}/>*/}
         </>
     );
 };
 
 export default MainRoutes;
 
-
-// <Routes>
-//     <Route path={`/`} element={<MainPage/>} props/>
-//     <Route path={`en`} element={<Navigate to={"/"} replace/>}/>
-//     <Route path={`en/`} element={<Navigate to={"/"} replace/>}/>
-//     <Route path={`${i18n.language}/`} element={<MainPage/>}/>
-//     {/*/!*<Route path={`${locale !== "en" ? `/${locale}/` : "/"}`} element={<MainPage/>}/>*!/*/}
-// </Routes>
-
-// <Switch>
-// <Redirect exact strict from={`/en/`} to={`/`}/>
-// <Redirect exact strict from={`/en/:category/`} to={`/:category/`}/>
-// <Redirect exact strict from={`/en/:category/:article/`} to={`/:category/:article/`}/>
-// {/*//before articles only in English*/}
-// <Redirect exact strict from={`/${locale}/:category/:article/}`} to={`/:category/:article/`}/>
-// <Redirect exact strict from={`/${locale}/:category/:article}`} to={`/:category/:article/`}/>
-//
-// {/*//without slash at the end*/}
-// <Redirect exact strict from={`/en`} to={`/`}/>
-// <Redirect exact strict from={`/en/:category`} to={`/:category/`}/>
-// <Redirect exact strict from={`/en/:category/:article`} to={`/:category/:article/`}/>
-// <Redirect exact strict from={`/${locale}`} to={`/${locale}/`}/>
-// <Redirect exact strict from={`/${locale}/:category`} to={`/${locale}/:category/`}/>
-//
-// {/*{exactArticle}*/}
-//
-// {/*//before articles only in English*/}
-// {/*<Route exact strict path={`${locale === "en" ? "" : `/${locale}`}/:category/:article/`} render={() => <Article*/}
-// {/*    locale={locale}*/}
-// {/*    singleCategory={singleCategory}*/}
-// {/*/>}/>*/}
-// <Route exact strict path={`${locale === "en" ? "" : `/${locale}`}/:category/`} render={() => <SingleCategory
-//     locale={locale}
-//     singleCategory={singleCategory}
-// />}/>
-// <Route exact strict path={`${locale === "en" ? "" : `/${locale}`}/`} render={() => <MainPage/>}/>
-// {/*<Route exact strict path={`/:category/:article/`} render={() => <Article*/}
-// {/*    locale={locale}*/}
-// {/*    singleCategory={singleCategory}*/}
-// {/*/>}/>*/}
-// {/*<Route exact strict path={`/:category/`} render={() => <SingleCategory*/}
-// {/*    locale={locale}*/}
-// {/*    singleCategory={singleCategory}*/}
-// {/*/>}/>*/}
-// {/*<Route exact strict path={`/`} render={() => <MainPage/>}/>*/}
-//
-// {/*<Route exact strict path={`/*`} render={() => < NotFound/>}/>*/}
-// </Switch>

@@ -5,8 +5,8 @@ const NotFound = () => {
     const {t} = useTranslation();
 
     return (
-        <div>
-            {t("notFound")}
+        <div style={{padding: "100px"}}>
+           Hello from princess=)))
         </div>
     );
 };
