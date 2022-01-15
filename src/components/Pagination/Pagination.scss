@@ -1,0 +1,118 @@
+@import "../../vars";
+@import "../../Mixins";
+
+.pagination__wrapper {
+  display: flex;
+  justify-content: center;
+  @include width-padding(300px, 35px 0 0px);
+  @media(min-width: 480px) {
+    @include width-padding(460px, 30px 0 0);
+  }
+  @media(min-width: 768px) {
+    justify-content: space-between;
+    align-items: center;
+    @include width-padding(640px, null);
+  }
+  @media(min-width: 1000px) {
+    @include width-padding(960px, null);
+  }
+  @media(min-width: 1280px) {@include width-padding(1200px, 73px 0 0px);}
+}
+
+.pagination__container {
+  max-width: 300px;
+  //width: 300px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  @media(min-width: 480px) {
+    max-width: 346px;
+    //width: 346px;
+  }
+}
+
+.pagination__number {
+  list-style: none;
+  padding: 5px 10px;
+  @include fontsize-weight-height-align-mb-color(16px, 700, 22px, center, null, $mainTitleColor);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media(min-width: 480px) {
+    padding: 6px 12px;
+    @include fontsize-weight-height-align-mb-color(18px, 700, 22px, center, null, $mainTitleColor);
+  }
+}
+
+.pagination__number.active {
+  //width: 44.03px;
+  color: $paginateNumber;
+  background: $paginateBG;
+  border-radius: 10px;
+  //border: 1px solid green;
+}
+
+.pagination__item {
+  display: flex;
+  list-style: none;
+
+  & svg {
+    font-size: 22px;
+    fill: #BFC9CE;
+  }
+}
+
+.pagination__item.previous {
+  &:hover {
+    cursor: pointer;
+
+    & svg:first-child {
+      fill: $Hover;
+    }
+  }
+}
+
+.pagination__item.next {
+  &:hover {
+    cursor: pointer;
+
+    & svg:last-child {
+      fill: $Hover;
+    }
+  }
+}
+
+
+.pagination__item > svg:last-child {
+  display: block;
+  margin-left: -15px;
+}
+
+.pagination__item.disabled {
+  & svg:last-child {
+    fill: #BFC9CE !important;
+  }
+
+  & svg:first-child {
+    fill: #BFC9CE !important;
+  }
+}
+.pagination__item svg {
+  background: transparent;
+}
+
+.pagination__info {
+  display: none;
+  @media(min-width: 768px) {
+    display: block;
+    @include fontsize-weight-height-align-mb-color(16px, null, 18.75px, null, null, $mainTextColor);
+
+    & > span {
+      margin: 0 4px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,180 @@
+@import "../../../vars";
+@import "../../../Mixins";
+
+
+.search__wrapper, .search__wrapper * {
+  background: $searchBG;
+  //@media(min-width: 768px) {
+  //  margin-bottom: 20px;
+  //}
+}
+
+.search__container {
+  @include width-padding(300px, 80px 0);
+  @media(min-width: 480px) {
+    @include width-padding(460px, 70px 0 80px);
+  }
+  @media(min-width: 768px) {
+    @include width-padding(630px, 80px 0 80px);
+  }
+}
+
+
+.search__main__title {
+  @include fontsize-weight-height-align-mb-color(24px, 400, 32.4px, center, 30px, $searchInputColor);
+  @media(min-width: 480px) {
+    @include fontsize-weight-height-align-mb-color(36px, 400, 48.6px, center, 26px, $searchInputColor);
+  }
+  @media(min-width: 768px) {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    @include fontsize-weight-height-align-mb-color(42px, 400, 56.7px, center, 20px, $searchInputColor);
+  }
+
+
+  & > p {
+    @include fontsize-weight-height-align-mb-color(24px, 400, 32.4px, center, null, $searchInputColor);
+    @media(min-width: 480px) {
+      @include fontsize-weight-height-align-mb-color(36px, 400, 48.6px, center, null, $searchInputColor);
+    }
+    @media(min-width: 768px) {
+      @include fontsize-weight-height-align-mb-color(42px, 400, 56.7px, center, null, $searchInputColor);
+    }
+  }
+}
+
+.kyrrex__name {
+  @include fontsize-weight-height-align-mb-color(24px, 700, 32.4px, center, 30px, $searchInputColor);
+  margin-left: 5px;
+  @media(min-width: 480px) {
+    @include fontsize-weight-height-align-mb-color(36px, 700, 48.6px, center, 26px, $searchInputColor);
+  }
+  @media(min-width: 768px) {
+    margin: unset;
+    @include fontsize-weight-height-align-mb-color(42px, 700, 56.7px, center, null, $searchInputColor);
+  }
+
+  & > span {
+    @include fontsize-weight-height-align-mb-color(24px, 400, 32.4px, center, 26px, $searchInputColor);
+    @media(min-width: 480px) {
+      @include fontsize-weight-height-align-mb-color(36px, 400, 48.6px, center, 26px, $searchInputColor);
+    }
+    @media(min-width: 768px) {
+      @include fontsize-weight-height-align-mb-color(42px, 400, 56.7px, center, null, $searchInputColor);
+    }
+  }
+}
+
+
+//// Input Custom /////
+.input__search__wrap, {
+  position: relative;
+  @media(min-width: 768px) {
+    width: 464px;
+    margin: 0 auto;
+  }
+}
+
+.input__search {
+  border: unset;
+  height: 46px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  padding: 11px 11px 11px 50px;
+  width: 100%;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &::placeholder {
+    opacity: 0.7;
+  }
+
+  @media(min-width: 480px) {
+    padding: 11px 11px 11px 70px;
+  }
+}
+
+.input__search__icon {
+  position: absolute;
+  top: 11px;
+  left: 19px;
+  background: #FFFFFF;
+  width: 24px;
+  height: 24px;
+  @media(min-width: 480px) {
+    left: 35px;
+  }
+}
+
+.divider {
+  border: 1px solid rgba(180, 181, 184, 0.15);
+  background: #FFFFFF;
+  margin-top: 16px;
+}
+
+.options__suggestions, .options__suggestions__outer {
+  background: #FFFFFF;
+
+}
+
+.input__custom__autocomplite {
+  position: absolute;
+  box-shadow: 0 2px 16px rgba(19, 20, 22, 0.07);
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 10px;
+  margin-top: 16px;
+  overflow: hidden;
+  overflow-y: scroll;
+  max-height: 215px;
+  //max-height: 245px;
+}
+
+.input__custom__option {
+  background: #FFFFFF;
+  @include fontTitle-size-weight-height-textalign-mb(12px, 400, 14.22px, null, null);
+  padding-bottom: 16px;
+}
+
+.options__suggestions__outer, .options__suggestions {
+  padding: 16px 32px 0;
+  border-radius: 10px;
+  @include fontTitle-size-weight-height-textalign-mb(12px, 400, 14.22px, null, null);
+  color: $inputSuggestionTitleColor;
+}
+
+.options__suggestions {
+  padding-bottom: unset;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 20px;
+}
+
+// scrollBar background exact
+::-webkit-scrollbar-track {
+  width: 10px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #a7a8a7;
+  //border: 0.25em solid #363940;
+}
+.vertical-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #83e551;
+}
+
+.search__result {
+  padding: 0 32px 16px;
+  @include fontsize-weight-height-align-mb-color(12px, null, 14.22px, null, null, $inputSuggestionTitleColor);
+  font-family: 'Rubik', sans-serif;
+  background-color: transparent;
+}

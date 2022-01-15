@@ -1,0 +1,18 @@
+@import "../../../vars";
+@import "../../../Mixins";
+
+.details__link {
+  text-decoration: none;
+  border: none;
+  background: #FFFFFF;
+  @include fontsize-weight-height-align-mb-color(14, null, 18.9px, null, null, $siteColor);
+
+  &:hover {
+    font-weight: 600;
+  }
+}
+
+.details__link__pic {
+  width: 11px;
+  margin-left: 5px;
+}

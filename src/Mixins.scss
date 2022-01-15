@@ -1,0 +1,85 @@
+@import "./vars";
+
+
+// Container
+@mixin width-padding($width, $padding) {
+  width: $width;
+  margin: 0 auto;
+  @if ($padding) != null {
+    padding: $padding;
+  }
+}
+
+// Grid
+@mixin columns-columnsGap-gap-alignItems-justifyContent ($columns, $columnsGap, $gap, $alignItems, $justifyContent) {
+  display: grid;
+  grid-template-columns: $columns;
+  align-items: center;
+  @if ($columnsGap) != null {
+  grid-column-gap: $columnsGap;
+  }
+  @if ( $gap) != null {
+    grid-gap:  $gap;
+  }
+  @if ($alignItems) != null {
+    align-items: $alignItems;
+  }
+  @if ($justifyContent) != null {
+    justify-content: $justifyContent;
+  }
+}
+
+// Flex
+@mixin flexColumn-justifyItems-gap-alignItems ($justifyItems, $gap, $alignItems, ) {
+  display: flex;
+  justify-items: $justifyItems;
+  flex-direction: column;
+  @if ($gap) != null {
+    grid-column-gap: $gap;
+  }
+  @if ($alignItems) != null {
+    align-items: $alignItems;
+  }
+}
+@mixin flex-justifyItems-gap-alignItems ($justifyItems, $gap, $alignItems, ) {
+  display: flex;
+  justify-items: $justifyItems;
+  @if ($gap) != null {
+    grid-column-gap: $gap;
+  }
+  @if ($alignItems) != null {
+    align-items: $alignItems;
+  }
+}
+
+/// Fonts
+@mixin fontTitle-size-weight-height-textalign-mb($font-size, $font-weight,  $line-height, $text-align, $margin-bottom ) {
+  font-family: 'Rubik', sans-serif;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  @if ($text-align) != null {
+    text-align: $text-align;
+  }
+  color: $mainTitleColor;
+  @if ($margin-bottom) != null {
+    margin-bottom: $margin-bottom;
+  }
+}
+
+@mixin fontsize-weight-height-align-mb-color($font-size, $font-weight, $line-height, $text-align,  $margin-bottom, $color ) {
+  font-size: $font-size;
+  @if ($font-weight) != null {
+    font-weight: $font-weight;
+  }
+  line-height: $line-height;
+  @if ($text-align) != null {
+    text-align: $text-align;
+  }
+  @if ($margin-bottom) != null {
+    margin-bottom: $margin-bottom;
+  }
+  @if ( $color) != null {
+    color: $color;
+  }
+}

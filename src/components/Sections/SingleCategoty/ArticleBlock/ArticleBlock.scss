@@ -1,0 +1,133 @@
+@import "../../../../vars";
+@import "../../../../Mixins";
+
+.article__block__wrapper * {
+  background: #FFFFFF;
+}
+
+.article__block__wrapper {
+  background: #FFFFFF;
+  border: 1px solid #EFF0F1;
+  box-shadow: 0 2px 16px rgba(54, 57, 64, 0.03);
+  border-radius: 20px;
+  padding: 20px;
+  height: 315px;
+
+  @media(min-width: 480px) {
+    height: 380px;
+  }
+  @media(min-width: 768px) {
+    height: 325px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+/// elipsis
+.article__block__short__text {
+  background: #FFFFFF;
+  @include fontsize-weight-height-align-mb-color(14px, null, 1.3em, null, 10px, $mainTextColor);
+  overflow: hidden;
+  position: relative;
+  height: 58px;
+  text-align: left;
+  margin-right: -1em;
+  padding-right: 1em;
+  @media(min-width: 480px) {
+    height: 38px;
+  }
+  @media(min-width: 768px) {
+    height: 55px;
+  }
+
+}
+
+.article__block__short__text:before {
+  content: '...';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.article__block__short__text:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  background: white;
+}
+
+/// elipsis
+.article__block__image {
+  width: 100%;
+  //width: 260px;
+  //height: auto;
+  height: 120px;
+  //max-height: 120px;
+  margin-bottom: 10px;
+  @media(min-width: 480px) {
+    //width: 420px;
+    height: 184px;
+  }
+  @media(min-width: 768px) {
+    width: 100%;
+    //width: 260px;
+    height: 114px;
+  }
+}
+
+.article__block__title {
+  --lh: 1.2em;
+  line-height: var(--lh);
+  --max-lines: 2;
+  max-height: calc(var(--lh) * var(--max-lines));
+  @include fontsize-weight-height-align-mb-color(18px, null, 1.2em, null, 10px, $mainTitleColor);
+  overflow: hidden;
+  position: relative;
+  //height: 45px;
+  text-align: left;
+  margin-right: -1em;
+  padding-right: 1em;
+  @media(min-width: 480px) {
+    @include fontsize-weight-height-align-mb-color(20px, null, 1.2em, null, 10px, $mainTitleColor);
+    //height: 48px;
+    margin-bottom: 15px;
+  }
+}
+
+.article__block__title:before {
+  content: '...';
+  font-size: 12px;
+  position: absolute;
+  right: 4px;
+  bottom: -2px;
+  @media(min-width: 480px) {
+    right: 11px;
+    bottom: -8px;
+  }
+}
+
+.article__block__title:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  background: white;
+  @media(min-width: 480px) {
+    right: 4px;
+  }
+}
+
+/// button
+.details__link__wrapper.article__block {
+  background: #FFFFFF;
+}
+

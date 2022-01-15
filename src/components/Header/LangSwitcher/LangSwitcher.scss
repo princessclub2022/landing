@@ -1,0 +1,77 @@
+@import "../../../Mixins";
+
+.lang__dropdown {
+  display: block;
+
+  &.hide {
+    display: none;
+  }
+}
+
+.custom__select {
+  width: 60px;
+  position: relative;
+  @media(min-width: 768px) {
+    width: unset;
+  }
+}
+
+.custom__select.is-active .custom__select__dropdown__menu {
+  display: block;
+  background: #FFFFFF;
+  border-radius: 5px;
+  z-index: 8;
+}
+
+.custom__select__header {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  //width: 70px;
+}
+
+.custom__select__current {
+  @include fontTitle-size-weight-height-textalign-mb(16px, 400, 19px, center, null);
+}
+
+.custom__select__icon {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 14px;
+  @media(min-width: 768px) {
+    font-size: 16px;
+  }
+  @media(min-width: 1000px) {
+    font-size: 18px;
+    margin-left: 5px;
+  }
+}
+
+.custom__select__dropdown__menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: none;
+  border-top: 0;
+}
+
+.custom__select__menu__item {
+  display: block;
+  text-decoration: none;
+  @include fontsize-weight-height-align-mb-color(14px, 400, 24px, center, null, $mainTextColor);
+  cursor: pointer;
+  padding: 10px 20% 10px 0;
+
+  @media(min-width: 1000px) {
+    line-height: 19px;
+  }
+
+  &:hover {
+    background-color: #f1fbf1;
+  }
+
+  &:first-child {
+    padding-top: 20px;
+  }
+}

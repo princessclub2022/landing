@@ -1,0 +1,34 @@
+{
+  "mainButton": "Подать заявку",
+  "detailsButton": "Подробнее",
+  "header": {
+    "linkText": "Посетить"
+  },
+  "padinationInfo": {
+    "beforeData": "Показано",
+    "middleData": "из",
+    "afterData": "статей"
+  },
+  "footer": {
+    "before": "Copyright ©",
+    "details": "REX EXCHANGE (REX) LIMITED.",
+    "after": "All rights reserved."
+  },
+  "inputSearch": {
+    "searchInputSuggestions": "Рекомендуемые статьи",
+    "placeholder": "Могу я чем-нибудь помочь?",
+    "searchResult": "Совпадений не найдено..."
+  },
+  "notFound": "Эта сраница не найдена",
+  "routesSteps": {
+    "home": "Kyrrex Помощь"
+  },
+  "feedback": {
+    "title": "Это ответ на Ваш вопрос?",
+    "yes": "Да",
+    "no": "Нет",
+    "modalAnswerNo": "Вам все еще нужна помощь?",
+    "modalAnswerYes": "Спасибо за ответ"
+  },
+  "resentArticlesBlock":"Последние статьи"
+}
