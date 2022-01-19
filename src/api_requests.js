@@ -1,7 +1,7 @@
 import axios from "axios";
-import {CMS} from "./env";
+// import {CMS} from "./env";
 
-// const CMS = "https://cms.kyrrex.com"
+const CMS = "https://cms.kyrrex.com"
 
 export const getInfoFromCms = (path, setInfo, setError, setLoading) => {
     setLoading(true)

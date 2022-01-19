@@ -14,13 +14,7 @@
   margin-top: 30px;
   margin-bottom: 30px;
   @media(min-width: 480px) {
-    @include width-padding(460px, null);
-  }
-  @media(min-width: 768px) {
-    @include width-padding(630px, null);
-  }
-  @media(min-width: 1000px) {
-    width: 700px;
+    @include width-padding(100%, null);
   }
 }
 

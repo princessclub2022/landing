@@ -2,7 +2,8 @@
   "mainButton": "Submit a ticket",
   "detailsButton": "More Details",
   "header": {
-    "linkText": "Go to"
+    "linkText": "Go to",
+    "siteLink": "{{link}}"
   },
   "padinationInfo": {
     "beforeData": "Showing",
@@ -30,5 +31,48 @@
     "modalAnswerNo": "Do you still need help?",
     "modalAnswerYes": "Thanks for the feedback"
   },
-  "resentArticlesBlock":"Recent articles"
+  "resentArticlesBlock":"Recent articles",
+  "article": {
+    "blog_title_link": "Content"
+  },
+  "helpQuestionBlock": "Do you still need help?",
+  "mainForm": {
+    "route": "Ticket form",
+    "title": "How can we help you?",
+    "name": "Your name",
+    "name_placeholder": "Please enter your name",
+    "email": "Your email address",
+    "email_error": "Invalid email format",
+    "email_placeholder": "Please enter your email",
+    "question": "Your question is related to",
+    "question_placeholder": "Please choose",
+    "question_options": [
+      {"value": "Registration", "label": "Registration"},
+      {"value": "Verification", "label": "Verification"},
+      {"value": "Deposits and withdrawals", "label": "Deposits and withdrawals"},
+      {"value": "AML", "label": "AML"},
+      {"value": "KRRX coin", "label": "KRRX coin"},
+      {"value": "Security", "label": "Security"},
+      {"value": "Staking and Earn programs", "label": "Staking and Earn programs"}
+    ],
+    "subject": "Subject",
+    "subject_placeholder": "Please enter your subject",
+    "description": "Description",
+    "description_placeholder": "Describe the question in detail",
+    "description_error": "Must be minimum 20 characters",
+    "attachments": "Attachments",
+    "attachments_placeholder": "Drop files to upload, or ",
+    "attachments_placeholder_colored": " browse",
+    "attachments_errors": {
+      "link": "* Please attach up to 3 files in .pdf, .doc, .docx format",
+      "main": "* Required field"
+    },
+    "years": " What year is it? (4 digits):",
+    "years_error": "Must be 4 digits",
+    "years_placeholder": "Please enter answer ",
+    "main_error__select": "Please choose item",
+    "text_error": "Must be minimum 3 characters",
+    "main_error": "Required field",
+    "submit_button": "Submit"
+  }
 }

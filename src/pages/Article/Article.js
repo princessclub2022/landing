@@ -13,11 +13,14 @@ import {useTranslation} from "react-i18next";
 import {getInfoFromCms} from "../../api_requests";
 import {useErrorHandler} from "react-error-boundary";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import CustomSelect from "../../components/CustomSelect/CustomSelect";
+import ArticleBody from "./ArticleBody";
 
 
 const Article = ({locale}) => {
     console.log("Article--------------------------------------------------")
     const [active, setActive] = useState(false);
+    const [isClickedDropDown, setIsClickedDropDown] = useState(true);
     const [positive, setPositive] = useState(false);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
@@ -26,21 +29,19 @@ const Article = ({locale}) => {
     const {t} = useTranslation();
     const handleError = useErrorHandler();
 
-    console.log(slug);
     useEffect(() => {
-        // document.querySelector(".lang__dropdown").classList.add("hide");
         getInfoFromCms(`/blogs?_locale=${locale}`, setArticles, setError, setLoading);
-        // getInfoFromCms(`/blogs?slug=${slug}&_locale=${locale}`, setArticle, setError, setLoading);
     }, [locale]);
 
     const articleInfo = articles.find(el => el.common_slug_is_exact_english_slug === slug);
-    console.log(articleInfo);
+
     if (articles.length === 0 || loading) return <Loader/>
     if (error) {
         handleError(error)
         return <ErrorPage locale={locale}/>
     }
 
+    const blogStructureLinks = articleInfo.article_block.length > 0 ? articleInfo.article_block.filter(el => (el.header !== null && el.header !== "")) : [];
 
     return (
         <>
@@ -52,14 +53,51 @@ const Article = ({locale}) => {
                             locale={locale}
                             linkTwo={articleInfo.category[0].category_link || ``}
                             linkTwoText={articleInfo.category[0].name || ``}
-                            linkThreeText={articleInfo ? articleInfo.title : ''}
+                            linkThreeText={articleInfo ? articleInfo.main_title : ''}
                         />
-                        <div className={"article__body"}>
-                            <div className={"kk"}>{parse(sanitizeHtml(articleInfo.blog_body))}</div>
+                        {/*// Body of Article*/}
+                        <div className={"article__body__container"}>
+                            <h1 className={"article__main__title"}>{articleInfo.main_title}</h1>
+                            {articleInfo.text_after_main_header ? <div className="blog__structure__text">
+                                {/*{parse(sanitizeHtml(articleInfo.text_after_main_header))}*/}
+                                {parse(sanitizeHtml(articleInfo.text_after_main_header, {
+                                    allowedTags: ["h1", "h2", "h3", "h4", "h5", "h6", "img", "p", "iframe", "span"],
+                                    allowedAttributes: {'*': ['href', 'alt', "src", "style"]},
+                                    allowedSchemes: ['http', 'https'],
+                                    allowedSchemesByTag: {
+                                        img: ['data', "src"],
+                                    },
+                                }))}
+                            </div> : null}
+                            {blogStructureLinks.length > 1 ?
+                            <CustomSelect
+                                onClick={() => setIsClickedDropDown(!isClickedDropDown)}
+                                className={"blog__structure__links"}
+                                list={blogStructureLinks}
+                                isClickedDropDown={isClickedDropDown}
+                                setIsClickedDropDown={setIsClickedDropDown}
+                                text_header={t("article.blog_title_link")}
+                            /> : null}
+                            {articleInfo.text_after_blog_structure ? <div className="blog__structure__text">
+                                {/*{parse(sanitizeHtml(articleInfo.text_after_blog_structure))}*/}
+                                {parse(sanitizeHtml(articleInfo.text_after_blog_structure, {
+                                    allowedTags: ["h1", "h2", "h3", "h4", "h5", "h6", "img", "p", "iframe", "span"],
+                                    allowedAttributes: {'*': ['href', 'alt', "src", "style"]},
+                                    allowedSchemes: ['http', 'https'],
+                                    allowedSchemesByTag: {
+                                        img: ['data', "src"],
+                                    },
+                                }))}
+                            </div> : null}
+                            <div className="article__body">
+                                {articleInfo.article_block.length > 0 ? articleInfo.article_block.map(i => <ArticleBody key={i.id} item={i}/>) : null}
+                            </div>
                             <FeedBackBlock setActive={setActive} setPositive={setPositive}/>
                         </div>
 
                     </div>
+
+                    {/*// Modal*/}
                     <Modal active={active} setActive={setActive} layer>
                         <>{positive ? <>
                                 <img src={smile} alt={"smile"} className="modal__picture"/>

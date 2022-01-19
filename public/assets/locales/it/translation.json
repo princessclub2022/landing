@@ -2,7 +2,8 @@
   "mainButton": "Подать заявку",
   "detailsButton": "More Details",
   "header": {
-    "linkText": "hfhhfhfh"
+    "linkText": "hfhhfhfh",
+    "siteLink": "{{link}}"
   },
   "padinationInfo": {
     "beforeData": "Showing",
@@ -30,5 +31,46 @@
     "modalAnswerNo": "Do you still need help?",
     "modalAnswerYes": "Thanks for the feedback"
   },
-  "resentArticlesBlock":"Recent articles"
+  "resentArticlesBlock":"Recent articles",
+  "article": {
+    "blog_title_link": "Content"
+  },
+  "helpQuestionBlock": "Do you still need help?"б
+  "mainForm": {
+    "route": "Ticket form",
+    "title": "How can we help you?",
+    "name": "Your name",
+    "name_placeholder": "Please enter your name",
+    "email": "Your email address",
+    "email_error": "Invalid email format",
+    "email_placeholder": "Please enter your email",
+    "question": "Your question is related to",
+    "question_placeholder": "Please choose",
+    "question_options": [
+      {"title": "Registration"},
+      {"title": "Verification"},
+      {"title": "Deposits and withdrawals"},
+      {"title": "AML"},
+      {"title": "KRRX coin"},
+      {"title": "Security"},
+      {"title": "Staking and Earn programs"}
+    ],
+    "subject": "Subject",
+    "subject_placeholder": "Please enter your email",
+    "description": "Description",
+    "description_placeholder": "Describe the question in detail",
+    "attachments": "Attachments",
+    "attachments_placeholder": "Drop files to upload, or ",
+    "attachments_placeholder_colored": " browse",
+    "attachments_errors": {
+      "link": "* Please attach one file in .pdf, .doc, .docx format",
+      "main": "* Required field"
+    },
+    "years": " What year is it? (4 digist):",
+    "years_error": "Должно быть 4 цифры",
+    "years_placeholder": "Please enter answer ",
+    "main_error__select": "Please choose item",
+    "main_error": "Please fill the field",
+    "submit_button": "Submit"
+  }
 }

@@ -1,13 +1,20 @@
 @import "../../vars";
 @import "../../Mixins";
 
-.article__body {
+.article__body, .article__body * {
   background: #FFFFFF;
+  width: 100%;
+}
+
+.article__body__description > iframe {
+  height: auto;
+  width: 300px;
+  display: block;
+  margin: 0 auto;
 }
 
 
 /// modal
-
 .modal__picture {
   width: 32px;
   height: 32px;
@@ -22,3 +29,183 @@
 .btn__text.modal__button {
   width: 240px;
 }
+
+
+/// Single Article
+.article__body__container {
+  @include width-padding(320px, 40px 10px);
+  background: #FFFFFF;
+  box-shadow: 0 2px 16px rgba(54, 57, 64, 0.07);
+  border-radius: 20px;
+
+  @media(min-width: 480px) {
+    @include width-padding(460px, 40px 20px);
+  }
+  @media(min-width: 768px) {
+    @include width-padding(640px, 60px 30px);
+  }
+  @media(min-width: 1000px) {
+    @include width-padding(961px, 60px 130px);
+  }
+  @media(min-width: 1280px) {
+    @include width-padding(1200px, 60px 130px);
+  }
+}
+
+
+.blog__structure__text, .blog__structure__text * {
+  background: transparent;
+}
+
+.article__main__title {
+  @include fontsize-weight-height-align-mb-color(36px, 700, 48px, null, 15px, $mainTitleColor);
+  background: transparent;
+}
+
+.article__body__title {
+  @include fontsize-weight-height-align-mb-color(28px, 500, 37.8px, null, 15px, $mainTitleColor);
+  background: transparent;
+  margin-top: 30px;
+}
+
+.article__body__description *,
+.blog__structure__text * {
+  @include fontsize-weight-height-align-mb-color(16px, null, 24px, null, 30px, $mainTitleColor);
+  background: transparent;
+}
+
+
+//// Custom SELECT /////
+
+.default__custom__select.blog__structure__links {
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  padding: 30px;
+  background: #F8F9FA;
+}
+
+.custom__select__header.blog__structure__links {
+  justify-content: left;
+}
+
+.custom__select__header__text {
+  @include fontsize-weight-height-align-mb-color(24px, null, 32.4px, null, null, $mainTitleColor);
+  margin-right: 15px;
+}
+
+.custom__select__icon.blog__structure__links > svg {
+  font-size: 16px;
+}
+
+.custom__select__menu__item__wrapper {
+  display: flex;
+  align-items: center;
+  @include fontsize-weight-height-align-mb-color(16px, null, 24px, null, null, $mainTitleColor);
+}
+
+.custom__select__dropdown__item__menu {
+  margin-top: 15px;
+  position: unset;
+  padding: unset;
+}
+
+.custom__links.blog__structure__links {
+  text-align: left;
+  margin-left: 8px;
+}
+
+.custom__links.blog__structure__links {
+  text-decoration: none;
+  @include fontsize-weight-height-align-mb-color(16px, null, 24px, null, null, $mainTitleColor);
+}
+
+.article__blog__structure * {
+  background: #FFFFFF;
+}
+
+.article__blog__structure {
+  align-items: center;
+  @include fontsize-weight-height-align-mb-color(16px, null, 24px, null, 15px, $mainTitleColor);
+}
+
+
+//////////////// images Blog //////////////////
+
+.article__body__image__container {
+  display: grid;
+  grid-gap: 30px;
+  margin-bottom: 15px;
+  align-items: center;
+
+  & img {
+    justify-self: center;
+    width: auto;
+    max-width: 100%;
+  }
+
+  &.one_pic {
+    width: 100%;
+
+    & img {
+      width: 100%;
+      height: auto;
+      //@media(min-width: 480px) {
+      //  //max-width: 350px;
+      //}
+      //@media(min-width: 768px) {
+      //  //max-height: 300px;
+      //}
+      //@media(min-width: 1000px) {
+      //}
+      //@media(min-width: 1280px) {
+      //}
+    }
+  }
+
+  &.two_pic {
+    @media(min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &.two_pic {
+    @media(min-width: 768px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+////// Attention Block ///////
+.article__body__attention__wrapper {
+  margin: 15px 0;
+}
+
+.article__body__attention__block {
+  width: 100%;
+  background: $attentionBlockColor;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.attention__block__text {
+  background-color: transparent;
+  @include columns-columnsGap-gap-alignItems-justifyContent(40px auto, 18px, null, center, center);
+  @media(min-width: 480px) {
+    grid-column-gap: 32px;
+  }
+}
+
+.attention__block__image {
+  background-color: transparent;
+  width: 40px;
+}
+
+.attention__block__description, .attention__block__description > p, .attention__block__description p span {
+  background-color: transparent;
+  @include fontsize-weight-height-align-mb-color(16px, null, 24px, null, null, $mainTitleColor);
+}
+
+
+
+

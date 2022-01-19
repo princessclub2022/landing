@@ -2,7 +2,8 @@
   "mainButton": "Подать заявку",
   "detailsButton": "Подробнее",
   "header": {
-    "linkText": "Посетить"
+    "linkText": "Посетить",
+    "siteLink": "{{link}}"
   },
   "padinationInfo": {
     "beforeData": "Показано",
@@ -30,5 +31,48 @@
     "modalAnswerNo": "Вам все еще нужна помощь?",
     "modalAnswerYes": "Спасибо за ответ"
   },
-  "resentArticlesBlock":"Последние статьи"
+  "resentArticlesBlock":"Последние статьи",
+  "article": {
+    "blog_title_link": "Содержание"
+  },
+  "helpQuestionBlock": "Вам все еще нужна помощь?",
+  "mainForm": {
+    "route": "Форма билета",
+    "title": "Чем мы можем вам помочь?",
+    "name": "Ваше имя",
+    "name_placeholder": "Пожалуйста, введите ваше имя",
+    "email": "Ваш адрес электронной почты",
+    "email_error": "Неверный формат электронной почты",
+    "email_placeholder": "Пожалуйста, введите адрес электронной почты",
+    "question": "Ваш вопрос связан с",
+    "question_placeholder": "Пожалуйста, выберите",
+    "question_options": [
+      {"value": "Registration", "label": "Регистрация"},
+      {"value": "Verification", "label": "Верификация"},
+      {"value": "Deposits and withdrawals", "label": "Ввод и вывод средств"},
+      {"value": "AML", "label": "AML"},
+      {"value": "KRRX coin", "label": "KRRX токен"},
+      {"value": "Security", "label": "Безопасность"},
+      {"value": "Staking and Earn programs", "label": "Программы ставок и депозит"}
+    ],
+    "subject": "Тема письма",
+    "subject_placeholder": "Пожалуйста, введите тему письма",
+    "description": "Описание",
+    "description_placeholder": "Подробно опишите вопрос",
+    "description_error": "Должно быть минимум 20 символов",
+    "attachments": "Вложения",
+    "attachments_placeholder": "Перетащите файлы для загрузки или ",
+    "attachments_placeholder_colored": " загрузите",
+    "attachments_errors": {
+      "link": "* Пожалуйста, прикрепите до 3 файлов в формате .pdf, .doc, .docx",
+      "main": "* Обязательное поле"
+    },
+    "years": " Какой сейчас год? (4-значный):",
+    "years_error": "Должно быть 4 цифры",
+    "years_placeholder": "Пожалуйста, введите ответ ",
+    "main_error__select": "Пожалуйста, выберите элемент",
+    "text_error": "Должно быть минимум 3 символа",
+    "main_error": "Обязательное поле",
+    "submit_button": "Отправить"
+  }
 }
