@@ -39,6 +39,8 @@ const HelpMainForm = ({locale}) => {
             {/*<div className="form__main__wrapper">*/}
             {/*    <h2 className={"form__main__title"}>{t("mainForm.title")}</h2>*/}
             {/*    <MainForm relatedQuestion={relatedQuestion}/>*/}
+
+
             {/*</div>*/}
         </div>
     );
