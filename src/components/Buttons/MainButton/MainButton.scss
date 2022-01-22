@@ -3,29 +3,35 @@
 
 .main__button {
   border: unset;
-
+  background: transparent;
 }
 
 .btn__text {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  @include fontsize-weight-height-align-mb-color(16px, 500, 18.75px, center, null, $mainButtonText);
-  letter-spacing: 0.02em;
-  padding: 11px;
+  @include fontsize-weight-height-align-mb-color(16px, 700, 24px, center, null, $mainButtonText);
+  padding: 14px;
   background: $mainButtonBackGround;
-  border-radius: 5px;
+  border-radius: 28px;
+  width: 282px;
 
   @media(min-width: 480px) {
-    padding: 11px 22px;
-    @include fontsize-weight-height-align-mb-color(16px, 500, 19px, center, null, $mainButtonText);
-  }
-  @media(min-width: 1000px) {
-    padding: 11px 24px;
+    @include fontsize-weight-height-align-mb-color(18px, 500, 21.78px, center, null, $mainButtonText);
   }
   &:hover {
-    background: $mainButtonBackGroundOnHover;
+    box-shadow: $mainButtonBackGroundOnHover;
     cursor: pointer;
   }
+}
+.main__button__img {
+  width: 24px;
+  margin-right: 10px;
+}
+.main__button__wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 

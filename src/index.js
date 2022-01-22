@@ -28,12 +28,9 @@ i18n
     .use(LanguageDetector)
     .use(HttpApi)
     .init({
-        whitelist: ["en", "ru", "it"],
-        supportedLngs: ["en", "ru", "it"],
-        fallbackLng: ['en'],
-        // defaultNS: 'common',
-        // preload: ["en"],
-        // lng: "en",
+        whitelist: ["en", "ru", "ua"],
+        supportedLngs: ["en", "ru", "ua"],
+        fallbackLng: ['ru'],
         detection: {
             order: ['localStorage', 'path',  'navigator', 'cookie', 'subdomain'],
             // order: ['path', "querystring",'localStorage',  'navigator', 'cookie', 'subdomain'],

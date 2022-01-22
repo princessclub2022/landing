@@ -5,11 +5,18 @@
   margin: 0;
   padding: 0;
   color: $mainTextColor;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
+  line-height: 16.94px;
   font-style: normal;
   font-weight: 400;
-  background: $mainBackground;
 }
 
-/*font-family: 'Rubik', sans-serif;*/
+
+.separator {
+  height: 0.9px;
+  background: linear-gradient(to right, transparent -10%, grey 44%, rgba(255, 255, 255, 0.61) 50%, transparent 100%, transparent 25%);
+  //background: linear-gradient(to right, transparent -5%, grey 27%, rgba(255, 255, 255, 0.61) 50%, transparent 94%, transparent 34%);
+  width: 312px;
+  margin: 0 auto;
+}

@@ -1,34 +1,22 @@
 {
-  "mainButton": "Подать заявку",
-  "detailsButton": "Подробнее",
-  "header": {
-    "linkText": "Посетить"
+  "name": "Princess Men’s Club & Karaoke ",
+  "comming_soon": {
+    "title_before": "До открытия нового клуба ",
+    "title_after": "осталось ",
+    "main_website": "Основной сайт"
   },
-  "padinationInfo": {
-    "beforeData": "Показано",
-    "middleData": "из",
-    "afterData": "статей"
+  "timer": {
+    "days": "Дней",
+    "hours": "Часов",
+    "minutes": "Минут",
+    "seconds": "Секунд"
   },
+  "buttons": {
+    "remind": "Напомнить"
+  },
+  "social_buttons_title": "Следите за новостями",
   "footer": {
-    "before": "Copyright ©",
-    "details": "REX EXCHANGE (REX) LIMITED.",
-    "after": "All rights reserved."
-  },
-  "inputSearch": {
-    "searchInputSuggestions": "Рекомендуемые статьи",
-    "placeholder": "Могу я чем-нибудь помочь?",
-    "searchResult": "Совпадений не найдено..."
-  },
-  "notFound": "Эта сраница не найдена",
-  "routesSteps": {
-    "home": "Kyrrex Помощь"
-  },
-  "feedback": {
-    "title": "Это ответ на Ваш вопрос?",
-    "yes": "Да",
-    "no": "Нет",
-    "modalAnswerNo": "Вам все еще нужна помощь?",
-    "modalAnswerYes": "Спасибо за ответ"
-  },
-  "resentArticlesBlock":"Последние статьи"
+    "name": "Princess Men’s Club™",
+    "rights": "All rights reserved"
+  }
 }

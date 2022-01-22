@@ -1,21 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.a733087f.css",
-    "main.js": "/static/js/main.5f84889a.js",
-    "static/js/787.288ee3ea.chunk.js": "/static/js/787.288ee3ea.chunk.js",
-    "static/media/nophoto.svg": "/static/media/nophoto.bd34a13e5ee74dee26121790f653f246.svg",
-    "static/media/kyrrex-logo-black (1).svg": "/static/media/kyrrex-logo-black (1).fdd94f452b72dc4f6cec9f5ad9bc37e4.svg",
-    "static/media/Smile.svg": "/static/media/Smile.1655963b68eee8a369388ad36000957d.svg",
+    "main.css": "/static/css/main.9d095706.css",
+    "main.js": "/static/js/main.c5aff7ca.js",
+    "static/js/787.eefbf342.chunk.js": "/static/js/787.eefbf342.chunk.js",
+    "static/media/ComingSoon.webp": "/static/media/ComingSoon.653c4d8df18ac1001f6a.webp",
+    "static/media/Logo.webp": "/static/media/Logo.0ad81db2d6fc9ee431dd.webp",
     "index.html": "/index.html",
-    "static/media/article-block-arrow-details.svg": "/static/media/article-block-arrow-details.5dc44bd45bb5f7d4b55089e134af7ead.svg",
+    "static/media/buttonPicAlarm.svg": "/static/media/buttonPicAlarm.fc7154a6fd31f44af0cc6f7f113f450a.svg",
     "static/media/getFetch.cjs": "/static/media/getFetch.c780682470504fffbd04.cjs",
-    "static/media/step-route.svg": "/static/media/step-route.b83c094977999f0a6c89b1536647c92e.svg",
-    "main.a733087f.css.map": "/static/css/main.a733087f.css.map",
-    "main.5f84889a.js.map": "/static/js/main.5f84889a.js.map",
-    "787.288ee3ea.chunk.js.map": "/static/js/787.288ee3ea.chunk.js.map"
+    "main.9d095706.css.map": "/static/css/main.9d095706.css.map",
+    "main.c5aff7ca.js.map": "/static/js/main.c5aff7ca.js.map",
+    "787.eefbf342.chunk.js.map": "/static/js/787.eefbf342.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a733087f.css",
-    "static/js/main.5f84889a.js"
+    "static/css/main.9d095706.css",
+    "static/js/main.c5aff7ca.js"
   ]
 }

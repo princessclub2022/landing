@@ -1,10 +1,9 @@
 import React from 'react';
 import {BrowserRouter, Route} from "react-router-dom";
 import MainRoutes from './MainRoutes';
-// import ScrollToTop from "../components/Buttons/ScrollToTop/ScrollToTop";
 
 const RoutesWrapper = () => {
-    const base = '/:locale(en|ru|it)?';
+    const base = '/:locale(en|ru|ua)?';
     return (
         <>
             <BrowserRouter>

@@ -1,0 +1,22 @@
+{
+  "name": "Princess Men’s Club & Karaoke ",
+  "comming_soon": {
+    "title_before": "До відкриття нового клубу ",
+    "title_after": "залишилося ",
+    "main_website": "Основной сайт"
+  },
+  "timer": {
+    "days": "Днів",
+    "hours": "Годин",
+    "minutes": "Хвилин",
+    "seconds": "Секунд"
+  },
+  "buttons": {
+    "remind": "Нагадати"
+  },
+  "social_buttons_title": "Слідкуйте за новинами",
+  "footer": {
+    "name": "Princess Men’s Club™",
+    "rights": "All rights reserved"
+  }
+}

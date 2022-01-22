@@ -1,0 +1,26 @@
+@import "../../../vars";
+
+.social__buttons__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 32px;
+  width: fit-content;
+  margin: 0 auto;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.social__item {
+  width: 32px;
+  height: 32px;
+  background: $socialButtonsBG;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  & > svg {
+    font-size: 20px;
+  }
+}

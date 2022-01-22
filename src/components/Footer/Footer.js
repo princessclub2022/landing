@@ -15,7 +15,7 @@ const Footer = ({locale}) => {
                     <div className="footer__text__inner">
                         <span className="footer__date">
                             {t("footer.before")}
-                            <p>{`2018 - ` + new Date().getFullYear()}</p>
+                            <p>{`2018 - ${new Date().getFullYear()} .`}</p>
                         </span>
                         <span className="footer__details">{t("footer.details")}</span>
                     </div>

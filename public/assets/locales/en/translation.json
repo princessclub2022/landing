@@ -1,34 +1,22 @@
 {
-  "mainButton": "Submit a ticket",
-  "detailsButton": "More Details",
-  "header": {
-    "linkText": "Go to"
+  "name": "Princess Men’s Club & Karaoke ",
+  "comming_soon": {
+    "title_before": "Till the opening",
+    "title_after": "opens in",
+    "main_website": "Main Website"
   },
-  "padinationInfo": {
-    "beforeData": "Showing",
-    "middleData": "from",
-    "afterData": "data"
+  "timer": {
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds"
   },
+  "buttons": {
+    "remind": "Remind"
+  },
+  "social_buttons_title": "Follow the news",
   "footer": {
-    "before": "Copyright ©",
-    "details": "REX EXCHANGE (REX) LIMITED.",
-    "after": "All rights reserved."
-  },
-  "inputSearch": {
-    "searchInputSuggestions": "Top article suggestions",
-    "placeholder": "How can i help you?",
-    "searchResult": "Nothing was found..."
-  },
-  "notFound": "This page not found",
-  "routesSteps": {
-    "home": "Kyrrex Help"
-  },
-  "feedback": {
-    "title": "Did this answer your question?",
-    "yes": "Yes",
-    "no": "No",
-    "modalAnswerNo": "Do you still need help?",
-    "modalAnswerYes": "Thanks for the feedback"
-  },
-  "resentArticlesBlock":"Recent articles"
+    "name": "Princess Men’s Club™",
+    "rights": "All rights reserved"
+  }
 }

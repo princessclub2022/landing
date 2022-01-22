@@ -1,0 +1,95 @@
+@import "../../vars";
+
+html {
+  background: #0C0E20;
+  background: url("../../assets/pictures/ComingSoon.webp") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.comming__soon__wrapper {
+  padding: 10px 0 42px;
+}
+
+.coming__soon__title__wrapper {
+  display: grid;
+  justify-content: center;
+  width: 320px;
+  margin: 0 auto;
+  @media(min-width: 768px) {
+    width: 600px;
+  }
+  @media(min-width: 1024px) {
+    width: 960px;
+  }
+  @media(min-width: 1280px) {
+    width: 1200px;
+  }
+}
+
+.comming__soon__title {
+  font-size: 24px;
+  line-height: 31px;
+  text-align: center;
+  color: $mainTextColor;
+
+  &.colored {
+    color: $siteTitleColor;
+    padding: 0 52px;
+    @media(min-width: 768px) {
+      padding: unset;
+    }
+  }
+
+  @media(min-width: 768px) {
+    font-size: 36px;
+    line-height: 47px;
+  }
+  @media(min-width: 1024px) {
+    font-size: 48px;
+    line-height: 62px;
+  }
+}
+
+.logo__picture.comming__soon {
+  display: block;
+  width: 256px;
+  margin: 0 auto 22px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media(min-width: 768px) {
+    margin-bottom: 42px;
+  }
+  @media(min-width: 1024px) {
+    margin-bottom: 59px;
+  }
+}
+
+.comming__soon__social__title {
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  margin-top: 52px;
+}
+
+.separator.comming_soon {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  @media(min-width: 768px) {
+    margin-bottom: 24px;
+  }
+}
+
+.comming__soon__title__container {
+  @media(min-width: 1024px) {
+    display: flex;
+    gap: 10px;
+  }
+}

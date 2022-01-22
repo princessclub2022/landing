@@ -1,0 +1,89 @@
+@import "../../vars";
+
+.token__counter__main__wrap {
+  background: transparent;
+}
+
+.token__counter__container {
+  width: 320px;
+  margin: 32px auto;
+  @media (min-width: 768px) {
+    width: 600px;
+  }
+  @media (min-width: 1280px) {
+    width: 1200px;
+    padding: unset;
+  }
+}
+
+.token__counter__time {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (min-width: 768px) {
+    gap: 50px;
+  }
+  @media (min-width: 1280px) {
+    justify-content: flex-start;
+  }
+
+  & > div {
+    display: grid;
+    justify-items: center;
+  }
+}
+
+.token__counter__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 87px;
+  height: 98px;
+  background: linear-gradient(rgba(39, 44, 92, 0.2) 0%, rgba(12, 46, 84, 0.6) 100%);
+  border-radius: 15px;
+  @media (min-width: 768px) {
+    width: 142px;
+    height: 160px;
+  }
+}
+
+
+.token__counter__box {
+  @media (min-width: 1280px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.time_number {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+  color: #FFFFFF;
+  text-align: center;
+  @media (min-width: 768px) {
+    font-size: 72px;
+    line-height: 87px;
+  }
+}
+
+.time_number_description {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  color: #FFFFFF;
+  margin-top: 8px;
+}
+
+.token__counter__box {
+  @media (min-width: 768px) {
+    display: grid;
+  }
+  @media (min-width: 1280px) {
+    display: flex;
+    justify-content: center;
+  }
+}
