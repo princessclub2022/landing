@@ -6,6 +6,7 @@ import MainButton from "../../components/Buttons/MainButton/MainButton";
 import {useTranslation} from "react-i18next";
 import alarm from "../../assets/pictures/buttonPicAlarm.svg";
 import FooterBlock from "../../components/Footer/FooterBlock";
+import {telegram_bot} from "../../env";
 
 const ComingSoon = ({locale}) => {
     if (!locale) locale = "ru"
@@ -23,7 +24,7 @@ const ComingSoon = ({locale}) => {
                 <Timer/>
 
                 <MainButton
-                    href={"telegram_bot"}
+                    href={telegram_bot}
                     picture={alarm}
                     btnText={t("buttons.remind")}
                     classNameButton={"comming__soon"}
