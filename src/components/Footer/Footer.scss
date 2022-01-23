@@ -7,6 +7,7 @@
   justify-items: center;
   gap: 3px;
   margin-bottom: 24px;
+  align-items: flex-end;
   @media(min-width: 768px) {
     display: flex;
     margin-bottom: 48px;
@@ -18,10 +19,11 @@
   align-items: flex-end;
   gap: 8px;
   @include fontsize-weight-height-align-mb-color(14px, null, 21px, null, null, $mainTextColor);
+  margin-right: 3px;
 }
 
 .rights__after__year {
-  @include fontsize-weight-height-align-mb-color(14px, null, 21px, null, null, $mainTextColor);
+  @include fontsize-weight-height-align-mb-color(14px, null, 20px, null, null, $mainTextColor);
 }
 
 .footer__link {
