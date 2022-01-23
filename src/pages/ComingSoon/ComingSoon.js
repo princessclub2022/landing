@@ -23,7 +23,7 @@ const ComingSoon = ({locale}) => {
                 <Timer/>
 
                 <MainButton
-                    // href={}
+                    href={"telegram_bot"}
                     picture={alarm}
                     btnText={t("buttons.remind")}
                     classNameButton={"comming__soon"}
