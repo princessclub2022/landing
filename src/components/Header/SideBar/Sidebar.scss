@@ -1,0 +1,239 @@
+@import "../../../vars";
+@import "../../../Mixins";
+
+/* Position and sizing of burger button */
+
+.bm-burger-button {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  right: 36px;
+  top: 37px;
+
+  @media(min-width: 768px) {
+    top: 49px;
+    position: absolute;
+    right: 0;
+  }
+
+  &:focus {
+    outline: unset;
+  }
+
+  @media(min-width: 1280px) {
+    display: none;
+  }
+}
+
+#react-burger-menu-btn:focus {
+  outline: unset;
+}
+
+#outer-container {
+  width: 80%;
+  @media(min-width: 1280px) {
+    display: none;
+  }
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: $BurgerBars;
+  border-radius: 10px;
+  border: 0.8px solid $BurgerBars;
+}
+
+/* shape our bars  */
+.burger__bars:first-child {
+  height: 0.9px !important;
+  width: 24px !important;
+  //margin-left: 6px;
+  // only words color
+}
+
+.burger__bars:nth-child(2) {
+  height: 0.9px !important;
+  width: 24px !important;
+  top: 35% !important;
+  // only words color
+}
+
+.burger__bars:last-child {
+  height: 0.9px !important;
+  width: 24px !important;
+  //margin-left: 10px;
+  top: 65% !important;
+  // only words color
+}
+
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  //background: $footerMenuHover;
+}
+
+//if need crossbar
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 18px;
+  width: 24px;
+  top: 32px !important;
+  right: 32px !important;
+  //right: 20px !important;
+
+  & > button {
+    top: 5px !important;
+
+    & > span {
+      top: 8px !important;
+    }
+  }
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: $BurgerBars;
+  width: 2px !important;
+  height: 24px !important;
+}
+
+/* This positions the cross centrally in the button */
+//.bm-cross-button > span {}
+
+/*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  @media(min-width: 768px) {
+    width: 477px !important;
+  }
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: $secoundBackground;
+  font-size: 16px;
+  line-height: 24px;
+  box-shadow: 0 4px 21px rgba(54, 57, 64, 0.15);
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  padding: 15px 15px 0;
+
+  & > div {
+    margin-bottom: 45px;
+  }
+
+  @media(min-width: 768px) {
+    padding: 20px 40px 0;
+  }
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Individual item */
+.bm-item {
+  display: block;
+  padding-right: 5px;
+  text-align: left;
+  text-decoration: none;
+  transition: color 0.2s;
+  outline: none;
+}
+
+
+///////////  list- styling ///////////
+
+////.sbList {
+//.menu_item {
+//  list-style-type: none;
+//  font-size: 16px;
+//  font-weight: 400;
+//  line-height: 22px;
+//  text-align: left;
+//  margin-bottom: 10px;
+//  text-decoration: none;
+//
+//}
+//
+//.sbList {
+//  list-style-type: none;
+//  margin-top: 16px;
+//}
+//
+//.sbList:hover > a {
+//  color: $sideBarMenuHover;
+//}
+//
+//
+//.sb__Title {
+//  list-style-type: none;
+//  margin-bottom: 25px;
+//
+//  &:hover > span {
+//    font-weight: 500;
+//
+//    & .fas {
+//      //color: $sideBarMenuHover;
+//      //color: $appHover;
+//    }
+//  }
+//}
+//
+//.sb__Title.drop > span {
+//  width: 100%;
+//  display: grid;
+//  grid-template-columns: auto auto;
+//  justify-content: space-between;
+//}
+//
+//.sidebar__item {
+//  font-size: 18px;
+//  font-weight: 500;
+//  line-height: 21px;
+//  color: $titleMainColor;
+//  text-decoration: none;
+//}
+//
+//.fas.fa-chevron-down.sidebar {
+//  font-size: 16px;
+//  color: $sideBarArrow;
+//  transform: rotate(-90deg);
+//}
+//
+//.fas.fa-chevron-down.sidebar.down {
+//  transform: rotate(0);
+//  margin-right: 3px;
+//}
+//
+//.menu_item.sidebar {
+//  font-size: 14px;
+//  font-weight: 400;
+//  line-height: 16px;
+//  color: $sideBarMenuItems;
+//}
+//
+//.sidebar__list {
+//  text-align: left;
+//}
+
+
+.logo__wrapper.bm-item.sidebar__logo {
+  width: 136px;
+}
+

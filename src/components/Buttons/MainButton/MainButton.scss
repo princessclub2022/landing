@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
+  text-decoration: none !important;
   @include fontsize-weight-height-align-mb-color(16px, 700, 24px, center, null, $mainButtonText);
   padding: 14px;
   background: $mainButtonBackGround;
@@ -23,6 +23,7 @@
   &:hover {
     box-shadow: $mainButtonBackGroundOnHover;
     cursor: pointer;
+    text-decoration: none !important;
   }
 }
 .main__button__img {

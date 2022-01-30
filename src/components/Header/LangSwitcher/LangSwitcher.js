@@ -1,19 +1,19 @@
 import React, {useEffect, useRef, useState} from 'react';
-import {defaultLanguage, language} from "../../../data/lang";
-import "./LangSwitcher.scss"
+import {language} from "../../../data/lang";
+// import "./LangSwitcher.scss"
 import {toFirstLatterUpperCase} from "../../helperFunctions/style";
 import i18n from "i18next";
 import {MdKeyboardArrowDown, MdKeyboardArrowUp} from "react-icons/md";
 import {Link} from "react-router-dom";
 
 
-const LangSwitcher = ({acceptedLang, locale}) => {
+const LangSwitcher = ({acceptedLang, locale, pathname}) => {
     const [selectHeader, setSelectHeader] = useState(false);
     const [desktop, setDesktop] = useState(false);
-    const [selectedLanguage, setSelectedLanguage] = useState("En");
+    const [selectedLanguage, setSelectedLanguage] = useState("Pус");
     const ref = useRef();
 
-    const pathname = window.location.pathname || "/";
+
     // const locale = localStorage.getItem("i18nextLng") || "en";
 
     const resize = () => (window.innerWidth >= 1000) ? setDesktop(true) : setDesktop(false);
@@ -45,25 +45,26 @@ const LangSwitcher = ({acceptedLang, locale}) => {
         i18n.changeLanguage(code);
         // if (!code) code = "en"
         const findSelectedLng = language.find(i => code.toUpperCase() === i.code.toUpperCase());
-        setSelectedLanguage(desktop ? findSelectedLng.name : toFirstLatterUpperCase(e.target.innerText))
+        setSelectedLanguage(desktop ? findSelectedLng.shortName : toFirstLatterUpperCase(e.target.innerText))
+        // setSelectedLanguage(desktop ? findSelectedLng.name : toFirstLatterUpperCase(e.target.innerText))
         setSelectHeader(false)
     }
 
-
+    //filter accepted lang from lang list
     const langsMenu = language.filter(el => acceptedLang.find(i => (i.code === el.code && i.accepted === true) ? el : false));
 
-    const langList = (langsMenu && langsMenu.length >= 2) ? langsMenu : defaultLanguage;
+    // const langList = (langsMenu && langsMenu.length >= 2) ? langsMenu : defaultLanguage;
     return (
         <div className={"lang__dropdown"} ref={ref}>
             <div className={`custom__select ${selectHeader ? "is-active" : ''}`}>
                 <div className="custom__select__header" onClick={() => setSelectHeader(!selectHeader)}>
                     <span
-                        className="custom__select__current">{(selectedLanguage !== null || true) ? selectedLanguage : "En"}</span>
+                        className="custom__select__current">{(selectedLanguage !== null || true) ? selectedLanguage : "Рус"}</span>
                     <div className="custom__select__icon">{selectHeader ? <MdKeyboardArrowUp/> :
                         <MdKeyboardArrowDown/>}</div>
                 </div>
                 <div className="custom__select__dropdown__menu">
-                    {selectHeader && langList.map(({code, name}) => {
+                    {selectHeader && langsMenu.map(({code, name}) => {
                         if ((!desktop && selectedLanguage.toUpperCase() !== code.toUpperCase()) || (desktop && selectedLanguage.toUpperCase() !== name.toUpperCase())) {
                             return (
                                 <Link

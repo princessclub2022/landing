@@ -3,8 +3,11 @@ import {Redirect, Route, Switch} from "react-router-dom";
 import {useErrorHandler} from "react-error-boundary";
 import i18n from "i18next";
 import ComingSoon from "../pages/ComingSoon/ComingSoon";
+import Header from "../components/Header/Header";
 
 // const TradeView = React.lazy(() => import("../pages/TradeView/TradeView"));
+
+
 
 const MainRoutes = (props) => {
     // const [acceptedLang, setAcceptedLang] = useState([]);
@@ -25,6 +28,7 @@ const MainRoutes = (props) => {
     return (
         <>
             <Switch>
+                {/*<Header locale={locale}/>*/}
                 <Redirect exact strict from={`/ru/`} to={`/`}/>
                 <Redirect exact strict from={`/ru`} to={`/`}/>
                 <Redirect exact strict from={`/ru/*`} to={`/`}/>
