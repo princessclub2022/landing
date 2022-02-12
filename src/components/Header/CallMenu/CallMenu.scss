@@ -1,0 +1,92 @@
+@import "../../../vars";
+@import "../../../Mixins";
+
+.header__call__menu__wrapper {
+  background: $secondBackGroundColor;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  padding: 32px 32px 0 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.header__call__close__menu {
+  display: flex;
+  justify-content: flex-end;
+
+  & svg {
+    display: block;
+    fill: $siteColor;
+    font-size: 36px;
+  }
+}
+
+.logo__wrapper.header__call__close__menu {
+  position: unset;
+  display: flex;
+  justify-content: center;
+
+  & > img {
+    width: 136px;
+    margin-left: 32px;
+  }
+}
+.header__call__info, .call__block  {
+  display: grid;
+  justify-items: center;
+}
+.header__call__info  {
+  margin: 40px 0 65px 17px;
+  @media(min-width: 360px) {
+    margin: 59px 0 65px 32px;
+  }
+}
+.call__block__location__pic {
+  width: 18px;
+  height: auto;
+  margin-bottom: 8px;
+}
+.call__block__location {
+  @include fontsize-weight-height-align-mb-color(18px, 700, 22px, center, 8px, $yellowText )
+}
+.call__block__location__address {
+  @include fontsize-weight-height-align-mb-color(18px, 400, 22px, center, 17px, $yellowText )
+ }
+
+.call__block__phone__pic {
+  fill: #FFFFFF !important;
+  width: 22px;
+  height: 22px;
+  margin-bottom: 8px;
+}
+
+.call__block__phone__number {
+  @include fontsize-weight-height-align-mb-color(18px, 700, 22px, center, 17px, #FFFFFF );
+  margin-bottom: 24px;
+  text-decoration: none;
+}
+.header__call__close__icon:hover {
+  cursor: pointer;
+}
+.main__button__wrapper.header__call  {
+  display: flex;
+  justify-content: center;
+  & > button {
+    width: 250px;
+    margin-left: 32px;
+  }
+}
+
+.lang__dropdown.header__call {
+  display: block;
+}
+.custom__select__dropdown__menu.header__call {
+  display: flex;
+}
+.lang__dropdown.header__call {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 48px 32px;
+}

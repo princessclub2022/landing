@@ -4,9 +4,11 @@ import {useErrorHandler} from "react-error-boundary";
 import i18n from "i18next";
 import ComingSoon from "../pages/ComingSoon/ComingSoon";
 import Header from "../components/Header/Header";
+import MainPage from "../pages/MainPage/MainPage";
+import ReserveTableForm from "../pages/ReserveTableForm/ReserveTableForm";
+import Gallery from "../pages/Gallery/Gallery";
 
 // const TradeView = React.lazy(() => import("../pages/TradeView/TradeView"));
-
 
 
 const MainRoutes = (props) => {
@@ -27,18 +29,55 @@ const MainRoutes = (props) => {
 
     return (
         <>
+            <Header locale={locale}/>
             <Switch>
-                {/*<Header locale={locale}/>*/}
                 <Redirect exact strict from={`/ru/`} to={`/`}/>
-                <Redirect exact strict from={`/ru`} to={`/`}/>
-                <Redirect exact strict from={`/ru/*`} to={`/`}/>
-                <Redirect exact strict from={`/${locale}`} to={`/${locale}/`}/>
-                <Route exact strict path={`/${locale}/`} render={() => <ComingSoon locale={locale}/>}/>
-                <Redirect exact strict from={`/${locale}/*`} to={`/${locale}/`}/>
+                <Redirect exact strict path={`/ru/zabronirovat-stol-onlajn/`} to={"/zabronirovat-stol-onlajn/"}/>
 
-                <Route exact strict path={`/${locale}/*`} render={() => <ComingSoon locale={locale}/>}/>
-                <Route exact strict path={`/`} render={() => <ComingSoon locale={locale}/>}/>
-                <Route exact strict path={`/*`} render={() => <ComingSoon locale={locale}/>}/>
+                {/*redirects without slash at the end*/}
+                <Redirect exact strict from={`/ru`} to={`/`}/>
+                <Redirect exact strict from={`/${locale}`} to={`/${locale}/`}/>
+
+                {/*<Route exact strict path={`/${locale}/*`} render={() => <ComingSoon locale={locale}/>}/>*/}
+                <Route exact strict path={`/`} render={() => <MainPage locale={locale}/>}/>
+                <Route exact strict path={`${locale === "ru" ? '' : `/${locale}`}/`} render={() => <MainPage locale={locale}/>}/>
+                {/*бронь форма сталоа*/}
+                <Route exact strict path={`/zabronirovat-stol-onlajn/`}
+                       render={() => <ReserveTableForm locale={locale}/>}/>
+                <Route exact strict path={`/ua/zabronuvatyt-stil-onlajn/`}
+                       render={() => <ReserveTableForm locale={locale}/>}/>
+                <Route exact strict path={`/en/booking/`} render={() => <ReserveTableForm locale={locale}/>}/>
+                {/*день рождения в клюбе*/}
+                <Route exact strict path={`/den-rozhdeniya-v-strip-klube/`}
+                       render={() => <ReserveTableForm locale={locale}/>}/>
+                <Route exact strict path={`/ua/den-narodjennya-v-strip-klubi/`}
+                       render={() => <ReserveTableForm locale={locale}/>}/>
+                <Route exact strict path={`/en/birthday-at-strip-club/`} render={() => <ReserveTableForm locale={locale}/>}/>
+                {/*Мальчишник*/}
+                <Route exact strict path={`/malchishnik/`}
+                       render={() => <ReserveTableForm locale={locale}/>}/>
+                <Route exact strict path={`/ua/malchishnik/`}
+                       render={() => <ReserveTableForm locale={locale}/>}/>
+                <Route exact strict path={`/en/bachelor-party/`} render={() => <ReserveTableForm locale={locale}/>}/>
+                {/*Членство в клубе*/}
+                <Route exact strict path={`/chlenstvo-v-klube/`}
+                       render={() => <ReserveTableForm locale={locale}/>}/>
+                <Route exact strict path={`/ua/chlenstvo-v-klubi/`}
+                       render={() => <ReserveTableForm locale={locale}/>}/>
+                <Route exact strict path={`/en/membership-card/`} render={() => <ReserveTableForm locale={locale}/>}/>
+                {/*Караоке*/}
+                <Route exact strict path={locale === "ru" ? `/karaoke/` : `/${locale}/karaoke/`}
+                       render={() => <ReserveTableForm locale={locale}/>}/>
+                {/*About*/}
+                <Route exact strict path={locale === "ru" ? `/about/` : `/${locale}/about/`}
+                       render={() => <ReserveTableForm locale={locale}/>}/>
+                {/*<Route exact strict path={`/*`} render={() => <ComingSoon locale={locale}/>}/>*/}
+                princessmensclub.ua/galereya
+                princessmensclub.ua/en/gallery
+                princessmensclub.ua//ua/galereya
+                <Route exact strict path={`/galereya/`} component={Gallery}/>
+                <Route exact strict path={`/ua/galereya/`} component={Gallery}/>
+                <Route exact strict path={`/en/gallery/`} component={Gallery}/>
             </Switch>
         </>
     );

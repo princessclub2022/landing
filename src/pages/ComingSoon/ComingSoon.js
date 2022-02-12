@@ -22,7 +22,6 @@ const ComingSoon = ({locale}) => {
                 </span>
                 </h1>
                 <Timer/>
-
                 <MainButton
                     href={telegram_bot}
                     picture={alarm}

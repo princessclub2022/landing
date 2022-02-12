@@ -4,16 +4,18 @@
 /* Position and sizing of burger button */
 
 .bm-burger-button {
-  position: fixed;
+  position: absolute;
   width: 24px;
   height: 24px;
-  right: 36px;
-  top: 37px;
+  right: 12px;
+  top: 28px;
+  @media(min-width: 360px) {
+    right: 22px;
+  }
 
-  @media(min-width: 768px) {
-    top: 49px;
+  @media(min-width: 600px) {
     position: absolute;
-    right: 0;
+    right: 24px;
   }
 
   &:focus {
@@ -30,8 +32,9 @@
 }
 
 #outer-container {
-  width: 80%;
-  @media(min-width: 1280px) {
+  width: 0px;
+  //width: 35px;
+  @media(min-width: 960px) {
     display: none;
   }
 }
@@ -45,14 +48,13 @@
 
 /* shape our bars  */
 .burger__bars:first-child {
-  height: 0.9px !important;
+  height: 1px !important;
   width: 24px !important;
-  //margin-left: 6px;
   // only words color
 }
 
 .burger__bars:nth-child(2) {
-  height: 0.9px !important;
+  height: 1px !important;
   width: 24px !important;
   top: 35% !important;
   // only words color
@@ -61,7 +63,6 @@
 .burger__bars:last-child {
   height: 0.9px !important;
   width: 24px !important;
-  //margin-left: 10px;
   top: 65% !important;
   // only words color
 }
@@ -79,7 +80,6 @@
   width: 24px;
   top: 32px !important;
   right: 32px !important;
-  //right: 20px !important;
 
   & > button {
     top: 5px !important;
@@ -131,14 +131,6 @@
 /* Wrapper for item list */
 .bm-item-list {
   padding: 15px 15px 0;
-
-  & > div {
-    margin-bottom: 45px;
-  }
-
-  @media(min-width: 768px) {
-    padding: 20px 40px 0;
-  }
 }
 
 /* Styling of overlay */
@@ -146,94 +138,120 @@
   background: rgba(0, 0, 0, 0.3);
 }
 
-/* Individual item */
-.bm-item {
+
+.logo__wrapper.bm-item.sidebar__logo{
+  position: unset;
+  top: unset;
+  left: unset;
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+
+  & > img {
+    width: 138px;
+    margin-bottom: 34px;
+  }
+}
+
+.header__navbar.bm-item.sidebar__logo {
   display: block;
-  padding-right: 5px;
-  text-align: left;
-  text-decoration: none;
-  transition: color 0.2s;
-  outline: none;
+}
+
+.header__navbar__list.bm-item.sidebar__logo {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  margin-bottom: 76px;
+}
+
+.navBar__item.bm-item.sidebar__logo {
+  text-align: center;
+}
+.header__menu__li.bm-item.sidebar__logo:nth-child(3), .header__menu__li.bm-item.sidebar__logo:nth-child(4),
+.header__menu__li.bm-item.sidebar__logo:nth-child(5) {
+  margin-right: 6px;
 }
 
 
-///////////  list- styling ///////////
+/////////////////////////////////  InfoBox
+.header__info__box.bm-item {
+  display: grid;
+  gap: 34px;
+}
 
-////.sbList {
-//.menu_item {
-//  list-style-type: none;
-//  font-size: 16px;
-//  font-weight: 400;
-//  line-height: 22px;
-//  text-align: left;
-//  margin-bottom: 10px;
-//  text-decoration: none;
-//
-//}
-//
-//.sbList {
-//  list-style-type: none;
-//  margin-top: 16px;
-//}
-//
-//.sbList:hover > a {
-//  color: $sideBarMenuHover;
-//}
-//
-//
-//.sb__Title {
-//  list-style-type: none;
-//  margin-bottom: 25px;
-//
-//  &:hover > span {
-//    font-weight: 500;
-//
-//    & .fas {
-//      //color: $sideBarMenuHover;
-//      //color: $appHover;
-//    }
-//  }
-//}
-//
-//.sb__Title.drop > span {
-//  width: 100%;
+.top__info.bm-item.sideBar__menu {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+.top__info__address.bm-item.sideBar__menu {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+.header__address.bm-item.sideBar__menu {
+  padding: unset;
+  border: unset;
+}
+
+.bottom__info.bm-item.sideBar__menu {
+  display: grid;
+  justify-items: center;
+
+  & > .main__button__wrapper.header__button {
+    margin-right: unset;
+   & > button {
+     width: 250px;
+     margin-bottom: 76px;
+   }
+  }
+}
+//.header__phone.bm-item.sideBar__menu {
 //  display: grid;
-//  grid-template-columns: auto auto;
-//  justify-content: space-between;
-//}
-//
-//.sidebar__item {
-//  font-size: 18px;
-//  font-weight: 500;
-//  line-height: 21px;
-//  color: $titleMainColor;
-//  text-decoration: none;
-//}
-//
-//.fas.fa-chevron-down.sidebar {
-//  font-size: 16px;
-//  color: $sideBarArrow;
-//  transform: rotate(-90deg);
-//}
-//
-//.fas.fa-chevron-down.sidebar.down {
-//  transform: rotate(0);
-//  margin-right: 3px;
-//}
-//
-//.menu_item.sidebar {
-//  font-size: 14px;
-//  font-weight: 400;
-//  line-height: 16px;
-//  color: $sideBarMenuItems;
-//}
-//
-//.sidebar__list {
-//  text-align: left;
+//  justify-items: center;
+//  gap: 8px;
 //}
 
-
-.logo__wrapper.bm-item.sidebar__logo {
-  width: 136px;
+.top__info__location.bm-item.sideBar__menu > p, .header__address.bm-item.sideBar__menu, .top__info__phone__link.bm-item.sideBar__menu {
+  @include fontsize-weight-height-align-mb-color(18px, 400, 22px, null, null, $yellowText);
 }
 
+.lang__dropdown.bm-item.sideBar__menu,  {
+  display: grid;
+}
+.custom__select__dropdown__menu.bm-item.sideBar__menu {
+  display: flex;
+  justify-content: center;
+}
+/////////////////////////////////
+.header__menu__li.bm-item.sidebar__logo > .dropDownMenu__wrapper {
+  position: unset;
+}
+
+
+.top__info__location.bm-item.sideBar__menu {
+  display: grid;
+  justify-items: center;
+}
+
+
+
+///////// navmenu
+
+.header__menu__li.bm-item.sidebar__logo {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  @include fontsize-weight-height-align-mb-color(18px, 500, 21px, null, null, null);
+
+  & > svg {
+    margin-left: 3px;
+  }
+
+  & > a {
+    @include fontsize-weight-height-align-mb-color(18px, 500, 21px, null, null, null);
+  }
+}

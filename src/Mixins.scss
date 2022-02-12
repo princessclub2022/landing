@@ -11,15 +11,15 @@
 }
 
 // Grid
-@mixin columns-columnsGap-gap-alignItems-justifyContent ($columns, $columnsGap, $gap, $alignItems, $justifyContent) {
+@mixin columns-columnsGap-gap-alignItems-justifyContent($columns, $columnsGap, $gap, $alignItems, $justifyContent) {
   display: grid;
   grid-template-columns: $columns;
   align-items: center;
   @if ($columnsGap) != null {
-  grid-column-gap: $columnsGap;
+    grid-column-gap: $columnsGap;
   }
   @if ( $gap) != null {
-    grid-gap:  $gap;
+    grid-gap: $gap;
   }
   @if ($alignItems) != null {
     align-items: $alignItems;
@@ -29,8 +29,15 @@
   }
 }
 
+@mixin grid-center-all() {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+}
+
 // Flex
-@mixin flexColumn-justifyItems-gap-alignItems ($justifyItems, $gap, $alignItems, ) {
+@mixin flexColumn-justifyItems-gap-alignItems($justifyItems, $gap, $alignItems, ) {
   display: flex;
   justify-items: $justifyItems;
   flex-direction: column;
@@ -41,7 +48,8 @@
     align-items: $alignItems;
   }
 }
-@mixin flex-justifyItems-gap-alignItems ($justifyItems, $gap, $alignItems, ) {
+
+@mixin flex-justifyItems-gap-alignItems($justifyItems, $gap, $alignItems, ) {
   display: flex;
   justify-items: $justifyItems;
   @if ($gap) != null {

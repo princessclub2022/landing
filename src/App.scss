@@ -1,4 +1,5 @@
 @import "./vars.scss";
+@import "./Mixins";
 
 * {
   box-sizing: border-box;
@@ -13,10 +14,52 @@
 }
 
 
+.about__club__text__wrapper {
+  padding: 100px 0;
+  width: 320px;
+  margin: 0 auto;
+  @media(min-width: 600px) {
+    width: 600px;
+  }
+  @media(min-width: 960px) {
+    padding: 128px 0;
+    width: 792px;
+  }
+}
+.about__club__title {
+  font-size: 24px !important;
+  line-height: 36px !important;
+  margin-bottom: 16px;
+  @media(min-width: 600px) {
+    margin-bottom: 52px;
+  }
+  @media(min-width: 960px) {
+    margin-bottom: 24px
+  }
+}
+
+.about__club__text,  .about__club__text p{
+  @include fontsize-weight-height-align-mb-color(14px, null, 21px, null, null, null);
+}
+
 .separator {
   height: 0.9px;
   background: linear-gradient(to right, transparent -10%, grey 44%, rgba(255, 255, 255, 0.61) 50%, transparent 100%, transparent 25%);
-  //background: linear-gradient(to right, transparent -5%, grey 27%, rgba(255, 255, 255, 0.61) 50%, transparent 94%, transparent 34%);
-  width: 312px;
+  width: 280px;
   margin: 0 auto;
+  @media(min-width: 360px) {
+    width: 312px;
+  }
+  @media(min-width: 1024px) {
+    height: 1.9px
+  }
+}
+
+
+.separator.comming_soon {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  @media(min-width: 768px) {
+    margin-bottom: 24px;
+  }
 }

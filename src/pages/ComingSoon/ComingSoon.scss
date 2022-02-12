@@ -1,12 +1,12 @@
 @import "../../vars";
 
 html {
-  background: #0C0E20;
-  background: url("../../assets/pictures/ComingSoon.webp") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: $secondBackGroundColor;
+  //background: url("../../assets/pictures/MainPage/slider1.webp") no-repeat 70% center fixed;
+  //-webkit-background-size: cover;
+  //-moz-background-size: cover;
+  //-o-background-size: cover;
+  //background-size: cover;
 }
 .comming__soon__wrapper {
   padding: 10px 0 42px;

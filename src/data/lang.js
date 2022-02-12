@@ -1,15 +1,18 @@
 export const language = [
     {
         code: "en",
-        // name: "English",
-        shortName: "Eng",
+        shortName: "En",
         country_code: "en"
     },
     {
         code: "ru",
-        // name: "English",
-        shortName: "Рус",
+        shortName: "Ru",
         country_code: "ru"
+    },
+    {
+        code: "ua",
+        shortName: "Ua",
+        country_code: "ua"
     }
 ]
 

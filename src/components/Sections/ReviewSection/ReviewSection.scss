@@ -1,0 +1,58 @@
+@import "../../../vars";
+@import "../../../Mixins";
+
+.review__main__page__wrapper {
+  background: $secondBackGroundColor;
+}
+.review__main__page__container {
+  padding: 100px 0;
+  width: 320px;
+  margin: 0 auto;
+  @media(min-width: 600px) {
+    width: 600px;
+  }
+  @media(min-width: 960px) {
+    padding: 128px 0;
+    width: 960px;
+  }
+  @media(min-width: 1280px) {
+    width: 1200px;
+  }
+}
+
+.review__main__title {
+  @include fontsize-weight-height-align-mb-color(36px, 500, 43.57px, center, 32px, null);
+  @media(min-width: 960px) {
+    @include fontsize-weight-height-align-mb-color(48px, null, 72px, center, 48px, null);
+    width: 724px;
+    margin: 0 auto 48px;
+  }
+}
+.review__item__box {
+  background: $reviewItemBg;
+  border-radius: 16px;
+  width: 282px;
+  height: 180px;
+  padding: 30px;
+  @include grid-center-all();
+}
+
+.review__main__box {
+  @include grid-center-all();
+  gap: 24px;
+  @media(min-width: 600px) {
+    grid-template-columns: repeat(2, 282px);
+    grid-row-gap: 24px;
+  }
+  @media(min-width: 960px) {
+    grid-column-gap: 24px;
+  }
+  @media(min-width: 1280px) {
+    grid-template-columns: repeat(4, 282px);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+

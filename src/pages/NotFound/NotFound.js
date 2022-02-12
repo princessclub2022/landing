@@ -6,7 +6,8 @@ const NotFound = () => {
 
     return (
         <div style={{padding: "100px"}}>
-           Hello from princess=)))
+          Not Found
+          Not Found
         </div>
     );
 };

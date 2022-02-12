@@ -1,0 +1,52 @@
+@import "../../vars";
+@import "../../Mixins";
+
+.gallery__wrapper {
+  padding: 140px 0 100px ;
+}
+
+.gallery__container {
+  padding: 0 24px;
+}
+.gallery__main__title {
+  @include fontsize-weight-height-align-mb-color(36px, 700, 43.57px, center, 24px, null);
+}
+.gallery__tabs {
+  background-color: $mainBackGroundColor;
+  border-radius: 10px;
+  //padding: 0 5px;
+  justify-content: space-between;
+
+}
+.gallery__tabs__item {
+  padding: 10px 5px;
+  @include fontsize-weight-height-align-mb-color(11px, null, 17px, center, null, null);
+  @media(min-width: 360px) {
+    @include fontsize-weight-height-align-mb-color(12px, null, 17px, center, null, null);
+  }
+
+  &.active {
+    background: $activeTabs;
+  }
+}
+.gallery__tabs__item.active:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.gallery__tabs__item.active:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.photo__item > img {
+  width: 200px;
+  height: auto;
+}
+
+.gallery__tabs {
+  display: grid;
+  width: 360px;
+  margin: 0 auto;
+  grid-template-columns: 0.6fr 1fr 1fr 1fr;
+  //justify-content: center;
+  justify-content: space-evenly;
+}

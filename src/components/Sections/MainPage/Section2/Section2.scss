@@ -1,0 +1,89 @@
+@import "../../../../vars";
+@import "../../../../Mixins";
+
+.about__club__wrapper {
+  padding: 100px 0;
+  width: 320px;
+  margin: 0 auto;
+  @media(min-width: 600px) {
+    width: 600px;
+  }
+  @media(min-width: 960px) {
+    padding: 128px 0;
+    width: 960px;
+  }
+  @media(min-width: 1280px) {
+    width: 1200px;
+  }
+}
+
+.about__club__options__item__description {
+  @include fontsize-weight-height-align-mb-color(18px, null, 21px, null, null, null);
+}
+
+
+.about__club__options {
+  display: grid;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 48px;
+  @media(min-width: 960px) {
+    margin-bottom: unset;
+  }
+}
+
+.about__club__options__item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.about__club__picture {
+  width: 64px;
+  height: auto;
+}
+
+.about__club__video {
+  width: 320px;
+  margin: 0 auto;
+  @media(min-width: 600px) {
+    width: 580px;
+    height: auto;
+  }
+  @media(min-width: 960px) {
+    width: 468px;
+    height: auto;
+  }
+  @media(min-width: 1280px) {
+    width: 588px;
+  }
+}
+
+.main__button__wrapper.about__club {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+
+  & > button {
+    width: 282px;
+  }
+  @media(min-width: 960px) {
+    margin-top: 43px;
+  }
+}
+
+.about__club__info {
+  @media(min-width: 960px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 43px;
+    align-items: center;
+  }
+}
+
+.about__club__video__wrapper {
+  @media(min-width: 600px) {
+    display: flex;
+  }
+}

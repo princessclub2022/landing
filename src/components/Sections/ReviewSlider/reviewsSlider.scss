@@ -1,0 +1,255 @@
+@import "../../../vars";
+@import "../../../Mixins";
+
+.reviews__slider__wrap {
+  width: 320px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  @media(min-width: 360px) {
+    width: 360px;
+  }
+  @media(min-width: 600px) {
+    width: 600px;
+  }
+  @media(min-width: 960px) {
+    padding: 0 0 128px 0;
+    width: 960px;
+  }
+  @media(min-width: 1280px) {
+    width: 1200px;
+  }
+}
+
+.comment__item__wrapper {
+  position: relative;
+}
+
+.comment__avatar__block {
+  width: 250px;
+  padding: 0 10px;
+  height: auto;
+  position: absolute;
+  display: grid;
+  justify-items: center;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  @media(min-width: 360px) {
+    width: 282px;
+  }
+  @media(min-width: 600px) {
+    width: 388px;
+  }
+  @media(min-width: 960px) {
+    width: 320px;
+  }
+}
+
+.person__comment__pic {
+  width: 48px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.person__comment__name {
+  @include fontsize-weight-height-align-mb-color(18px, 600, 21.78px, center, 6px, null)
+}
+
+.person__comment__date {
+  @include fontsize-weight-height-align-mb-color(14px, null, 17px, null, null, $commentsDate)
+}
+
+.person__comment__comment {
+  @include fontsize-weight-height-align-mb-color(14px, null, 17px, center, 15px, #FFFFFF);
+  //max-height: 136px;
+  max-height: 170px;
+  overflow-y: scroll;
+  @media(min-width: 960px) {
+    max-height: 121px;
+  }
+}
+
+.person__comment__rate {
+  width: 85px;
+  height: auto;
+}
+
+.comment__person__info {
+  background: $commentsSliderBG;
+  margin-top: 24px;
+  padding: 85px 32px 32px;
+  @include grid-center-all();
+  max-height: 320px;
+  overflow: hidden;
+  @media(min-width: 960px) {
+    height: 281px;
+  }
+}
+
+
+///// slider
+
+.slick-slider.reviews__slider.comments.slick-initialized {
+  width: 320px;
+  overflow: hidden;
+  position: relative;
+  @media(min-width: 360px) {
+    width: 360px;
+  }
+  @media(min-width: 600px) {
+    width: 540px;
+    margin: 0 auto;
+  }
+  @media(min-width: 960px) {
+    width: 960px;
+  }
+  @media(min-width: 1280px) {
+    width: 1200px;
+  }
+}
+
+.slick-slider.reviews__slider.comments.slick-initialized  .slick-list {
+  height: 370px !important;
+  @media(min-width: 960px) {
+    width: 720px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 350px !important;
+  }
+  @media(min-width: 1280px) {
+    width: 1050px;
+  }
+}
+
+
+// inside slick-slide > div (slick slide 360 div inside 282)
+.slick-slider.reviews__slider.comments.slick-initialized > div > div > div > div {
+  width: 250px;
+  margin: 0 auto;
+  @media(min-width: 360px) {
+    width: 282px;
+  }
+  @media(min-width: 600px) {
+    width: 388px;
+  }
+  @media(min-width: 960px) {
+    width: 320px;
+  }
+}
+
+.slick-slider.reviews__slider.comments.slick-initialized.slick-arrow {
+  position: absolute;
+}
+
+.slick-slider.reviews__slider.comments.slick-initialized > .slick-arrow > .slick-prev {
+  top: 10px;
+  left: 0;
+}
+
+.slick-slider.reviews__slider.comments.slick-initialized  .slick-dots {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  bottom: 10px;
+  @media(min-width: 600px) {
+    bottom: 50px;
+  }
+}
+
+.slick-slider.reviews__slider.comments.slick-initialized .slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  //height: 10px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+  transition: width 0.3s ease-in-out;
+}
+
+.slick-slider.reviews__slider.comments.slick-initialized .slick-dots li button:before {
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  content: "•";
+  text-align: center;
+  //opacity: 0.25;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li button::before {
+  width: 8px;
+  height: 8px;
+  content: "";
+  background-color: $slickDotsBack;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+
+.slick-dots li.slick-active button::before {
+  color: $slickDots;
+  background: $slickDots;
+  opacity: 1;
+}
+
+.slick-slider.reviews__slider.comments.slick-initialized .slick-arrow {
+  position: absolute;
+  top: 40%;
+  width: 16px;
+  z-index: 100;
+}
+
+.slick-slider.reviews__slider.comments.slick-initialized > .slick-arrow.slick-next {
+  right: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media(min-width: 960px) {
+    right: -1px;
+  }
+}
+
+.slick-slider.reviews__slider.comments.slick-initialized > .slick-arrow.slick-prev {
+  left: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media(min-width: 960px) {
+    left: -1px;
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 8px;
+}
+
+// scrollBar background exact
+::-webkit-scrollbar-track {
+  width: 5px;
+  border-radius: 10px;
+
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.07);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #252846;
+}
+
+
+

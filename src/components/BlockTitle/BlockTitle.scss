@@ -1,0 +1,19 @@
+@import "../../vars";
+@import "../../Mixins";
+
+
+.about__club__title {
+  @include fontsize-weight-height-align-mb-color(36px, 500, 43.57px, null, null, null);
+  @media(min-width: 1280px) {
+    @include fontsize-weight-height-align-mb-color(48px, 500, 58px, null, null, null);
+  }
+}
+.about__club__devider {
+  width: 78px;
+  height: 1px;
+  background: $hover;
+  margin: 10px 0 48px;
+  @media(min-width: 960px) {
+    margin-bottom: 63px;
+  }
+}

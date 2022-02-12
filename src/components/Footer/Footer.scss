@@ -34,3 +34,141 @@
   display: block;
   margin: 0 auto;
 }
+
+/////////////////////////////////////////////////
+
+.footer__main__wrapper {
+  background: rgba(13, 14, 32, 0.6);
+  padding: 32px 24px;
+  @media(min-width: 960px) {
+    margin-top: 42px;
+  }
+}
+
+
+.logo__wrapper.footer__main__logo {
+  position: unset !important;
+}
+
+.logo__picture.footer__main__logo {
+  width: 136px;
+  height: 67px;
+  margin: 0 auto 32px;
+  @media(min-width: 1280px) {
+    margin-bottom: unset;
+  }
+}
+
+
+/////////////  NavBar
+
+.footer__navbar__item {
+  list-style: none;
+}
+
+.footer__navbar__item__link {
+  text-decoration: none;
+  @include fontsize-weight-height-align-mb-color(14px, 600, 17px, null, 16px, null);
+}
+
+.footer__navbar {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  @media(min-width: 600px) {
+    width: 370px;
+    margin: 0 auto 32px;
+    justify-content: center;
+  }
+  @media(min-width: 960px) {
+    width: unset;
+    margin-bottom: unset;
+  }
+}
+
+.main__button__wrapper.footer__main__btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+
+  & > button {
+    width: 282px;
+  }
+  @media(min-width: 1280px) {
+    margin-bottom: unset;
+  }
+}
+
+.footer__text {
+  display: grid;
+  justify-items: center;
+}
+
+.footer__text__inner {
+  margin: 32px auto 24px;
+  display: grid;
+  justify-content: center;
+  @media(min-width: 960px) {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.footer__date {
+  @include fontsize-weight-height-align-mb-color(14px, null, 21px, null, null, null);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  & > p {
+    margin-left: 8px;
+  }
+}
+
+.footer__details {
+  @include fontsize-weight-height-align-mb-color(14px, null, 21px, null, null, null);
+  text-align: center;
+  @media(min-width: 960px) {
+    margin-left: 5px;
+    line-height: 18px;
+  }
+}
+
+.footer__main__pic {
+  width: 121px;
+  height: auto;
+  margin: 24px auto 32px;
+}
+
+.grid__footer {
+  @media(min-width: 960px) {
+    display: flex;
+    gap: 64px;
+    align-items: center;
+  }
+}
+.grid__footer__outer {
+  @media(min-width: 1280px) {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    justify-content: center;
+  }
+}
+.footer__container {
+  //@media(min-width: 600px) {
+  //  width: 600px;
+  //  margin: 0 auto;
+  //}
+  margin: 0 auto;
+  @media(min-width: 960px) {
+    width: 920px;
+  }
+  @media(min-width: 1024px) {
+    width: 960px;
+  }
+  @media(min-width: 1280px) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,133 @@
+@import '../../../vars';
+@import '../../../Mixins';
+
+.header__navbar {
+  display: none;
+  @media(min-width: 960px) {
+    display: block;
+  }
+}
+
+.header__navbar__list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  @media(min-width: 1024px) {
+    gap: 15px;
+  }
+  @media(min-width: 1280px) {
+    gap: 20px;
+  }
+}
+
+.header__menu__item {
+  display: flex;
+  gap: 5px;
+}
+
+.navBar__item {
+  display: flex;
+  align-items: center;
+  @include fontsize-weight-height-align-mb-color(14px, 500, 16.94px, null, null, #ffff);
+  text-decoration: none;
+
+  & > svg {
+    margin-left: 5px;
+  }
+}
+
+////desktop
+.header__menu__li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  @include fontsize-weight-height-align-mb-color(14px, 500, 16px, null, null, null);
+
+  & > svg {
+    margin-left: 3px;
+  }
+
+  & > a {
+    @include fontsize-weight-height-align-mb-color(14px, 500, 16px, null, null, null);
+  }
+
+  &:hover, &:hover > a {
+    cursor: pointer;
+    color: $hover;
+  }
+}
+
+.dropDownMenu__wrapper {
+  padding: 18px 0;
+  //padding: 12px 10px;
+  position: absolute;
+  display: grid;
+  gap: 12px;
+  left: 0;
+
+  //background: $mainBackGroundColor;
+  //border: 1px solid orangered;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  @media(min-width: 1024px) {
+    top: 17px;
+    left: 0;
+    width: 100px;
+
+
+    &.header_first {
+      padding: 12px 10px;
+      background: linear-gradient(0deg, rgba(12,14,32,1) 0%, rgba(245,247,247,0) 100%);
+      width: 132px;
+      left: -10px;
+      gap: 8px;
+    }
+    &.header_second {
+      background: linear-gradient(0deg, rgba(12,14,32,1) 0%, rgba(245,247,247,0) 100%);
+      padding: 12px 10px;
+      width: 100px;
+      left: -10px;
+      gap: 8px;
+    }
+  }
+
+  &.sideBar_first {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  &.sideBar_second {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.drop_element {
+  text-decoration: none;
+  &.header_first, &.header_second {
+    font-size: 12px;
+  }
+  &.sideBar_second, &.sideBar_first {
+    font-size: 14px;
+  }
+}
+
+.dropMenu__item {
+  &:hover {
+    cursor: pointer;
+
+    & > a {
+      color: $address;
+    }
+  }
+
+  &.sideBar_second, &.sideBar_first {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+  }
+}
+.drop__up {
+  fill: $yellowText;
+}

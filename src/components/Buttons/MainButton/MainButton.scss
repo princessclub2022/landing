@@ -4,6 +4,10 @@
 .main__button {
   border: unset;
   background: transparent;
+  border-radius: 28px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .btn__text {
@@ -15,26 +19,25 @@
   padding: 14px;
   background: $mainButtonBackGround;
   border-radius: 28px;
-  width: 282px;
+  min-width: 134px;
+  @media(min-width: 1280px) {
+    min-width: 178px;
+  }
 
   @media(min-width: 480px) {
     @include fontsize-weight-height-align-mb-color(18px, 500, 21.78px, center, null, $mainButtonText);
-  }
-  &:hover {
-    box-shadow: $mainButtonBackGroundOnHover;
-    cursor: pointer;
-    text-decoration: none !important;
   }
 }
 .main__button__img {
   width: 24px;
   margin-right: 10px;
 }
-.main__button__wrapper {
-  display: flex;
-  justify-content: center;
-}
 
+.main__button__wrapper.second__style > .main__button > a {
+  background: transparent;
+  border: 1px solid $siteColor;
+  color: $siteColor;
+}
 
 
 

@@ -1,0 +1,71 @@
+@import "../../../../vars";
+@import "../../../../Mixins";
+
+.karaoke__page__wrapper {
+  background:  top 20% left 40%/ cover no-repeat #03040E url("../../../../assets/pictures/MainPage/bg_karaoke.jpg");
+}
+
+.karaoke__page__container {
+  padding: 100px 0;
+  width: 320px;
+  margin: 0 auto;
+  @media(min-width: 600px) {
+    width: 600px;
+  }
+  @media(min-width: 960px) {
+    padding: 128px 0;
+    width: 960px;
+  }
+  @media(min-width: 1280px) {
+    width: 1200px;
+  }
+}
+
+.karaoke__page__description {
+  @include fontsize-weight-height-align-mb-color(18px, null, 21.78px, null, 49px, null);
+  @media(min-width: 960px) {
+    @include fontsize-weight-height-align-mb-color(24px, null, 29px, null, 49px, null);
+  }
+}
+
+.karaoke__page__info {
+  display: grid;
+  gap: 48px;
+  @media(min-width: 600px) {
+    grid-template-columns: 0.7fr 1fr;
+    gap: 60px;
+  }
+}
+
+.mainPage__karaoke__list__item {
+  display: flex;
+  gap: 38px;
+  align-items: flex-start;
+  @media(min-width: 600px) {
+    gap: 16px;
+  }
+}
+.mainPage__karaoke__list__item:last-child > div > .karaoke__list__item__description {
+  @media(min-width: 1200px) {
+    padding-right: 100px;
+  }
+}
+
+.mainPage__karaoke__list__pic {
+  width: 68px;
+  height: auto;
+}
+.karaoke__list__item__title {
+  @include fontsize-weight-height-align-mb-color(18px, 700, 22px, null, 8px, $yellowText);
+}
+.karaoke__list__item__description {
+  @include fontsize-weight-height-align-mb-color(14px, null, 21px, null, 8px, null);
+}
+
+.karaoke__list__item__link {
+  @include fontsize-weight-height-align-mb-color(14px, null, 21px, null, null, $yellowText);
+  &:hover {
+    cursor: pointer;
+  }
+}
+

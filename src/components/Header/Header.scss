@@ -2,3 +2,156 @@
 @import "../../Mixins";
 
 
+.header__wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 3000;
+  @media(min-width: 960px) {
+    background: rgba(13, 14, 32, 0.6);
+  }
+
+  &.header__active {
+    //padding-top: 15px;
+    background: $secondBackGroundColor;
+  }
+}
+
+
+.header__container {
+  height: 75px;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  align-items: center;
+
+  @media(min-width: 360px) {
+    padding: 15px 24px;
+  }
+
+  @media(min-width: 600px) {
+    width: 600px;
+    margin: 0 auto;
+  }
+  @media(min-width: 960px) {
+    width: 960px;
+    padding: 15px 0;
+    height: 103px;
+  }
+  @media(min-width: 1024px) {
+    width: 1000px;
+  }
+  @media(min-width: 1280px) {
+    width: 1200px;
+    justify-content: center;
+    height: 103px;
+  }
+}
+
+
+.btn__text.header__button {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 12px;
+  @media(min-width: 1280px) {
+    padding: 12px 16px;
+  }
+}
+
+.main__button__wrapper.header__button.orange__text {
+  //margin: 0 18px 0 10px;
+  @media(min-width: 600px) {
+    //margin: unset;
+    & > button {
+      width: 172px;
+    }
+  }
+}
+
+.main__page__first__slide.second__style.orange__text {
+  display: none;
+  @media(min-width: 960px) {
+    display: block;
+    & > button {
+      width: 172px;
+    }
+  }
+}
+
+.btn__text.main__page__first__slide.second__style.orange__text {
+  @media(min-width: 960px) {
+    font-size: 14px !important;
+    line-height: 18px;
+    padding: 12px;
+    color: #FFFFFF;
+  }
+}
+
+.logo__picture {
+  display: block;
+  width: 78px;
+  height: auto;
+}
+
+.logo__wrapper {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  @media(min-width: 360px) {
+    left: 24px;
+  }
+  @media(min-width: 960px) {
+    position: unset;
+    top: unset;
+    left: unset;
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+    & > img {
+      width: 102px;
+      height: auto;
+      margin: 0 32px;
+    }
+  }
+  @media(min-width: 1280px) {
+    & > img {
+      width: 136px;
+      margin: 0 65px;
+    }
+  }
+}
+
+.top__info {
+  display: flex;
+}
+
+
+.header__info__box {
+  display: none;
+  @media(min-width: 960px) {
+    margin: 0 20px 0 0;
+    display: grid;
+    gap: 13px;
+  }
+}
+
+.header__mobile__icon {
+  width: 22px;
+  height: auto;
+  margin: 0 35px 0 10px;
+  @media(min-width: 600px) {
+    margin: 0 67px 0 32px;
+  }
+  @media(min-width: 960px) {
+    margin: unset;
+    display: none;
+  }
+}
+
+.info__header__wrap {
+  display: flex;
+  @media(min-width: 960px) {
+    gap: 16px;
+    align-items: center;
+  }
+}

@@ -1,0 +1,56 @@
+@import "../../vars";
+@import "../../Mixins";
+
+.form_grid_container {
+  @media(min-width: 1000px) {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 94px;
+  }
+}
+
+.main__button__wrapper.main__form__button > button > p {
+  @media(min-width: 1000px) {
+    padding: 15px 24px;
+  }
+}
+
+.form__grid {
+  @media(min-width: 1000px) {
+    //width: 300px;
+    height: fit-content;
+    &.double__columns {
+      display: grid;
+      grid-template-columns: 300px 300px;
+      gap: 30px;
+    }
+  }
+  @media(min-width: 1280px) {
+    &.double__columns__wrapper {
+      width: 100%;
+ display: grid;
+      grid-template-columns: auto 392px;
+      gap: 57px;
+    }
+  }
+
+}
+
+.form__main__image {
+  width: 237px;
+  display: block;
+  margin: 30px auto;
+  &.desktop__form__pic {
+    display: none;
+  }
+  @media(min-width: 1000px) {
+    margin: unset;
+  }
+  @media(min-width: 1280px) {
+   display: none;
+    &.desktop__form__pic {
+      display: block;
+      width: 392px;
+    }
+  }
+}

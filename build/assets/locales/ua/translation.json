@@ -12,11 +12,250 @@
     "seconds": "Секунд"
   },
   "buttons": {
-    "remind": "Нагадати"
+    "remind": "Нагадати",
+    "reserveTable": "Зарезервувати стiл",
+    "reserveTableHeader": "Зарезервувати",
+    "call":"Зателефонувати",
+    "details": "Детальнее"
   },
   "social_buttons_title": "Слідкуйте за новинами",
   "footer": {
     "name": "Princess Men’s Club™",
     "rights": "All rights reserved"
-  }
+  },
+  "header": {
+    "city": "Kiev",
+    "club1": "вул. Хрещатик 14",
+    "club2": "бул. Лесі Українки 34"
+  },
+  "header_nav_bar": [
+    {
+      "title": "Наші клуби",
+      "dropDownMenu": [
+        {
+          "title": "Exchange",
+          "url": "https://my.kyrrex.com/sign-in"
+        },
+        {
+          "title": "OTC",
+          "url": "https://otc.kyrrex.com/sign-in"
+        },
+        {
+          "title": "Liquidity HUB ",
+          "navlink": "/liquidity-hub/"
+        }
+      ]
+    },
+    {
+      "title": "Меню",
+      "dropDownMenu": [
+        {
+          "title": "Exchange",
+          "url": "https://my.kyrrex.com/sign-in"
+        },
+        {
+          "title": "OTC",
+          "url": "https://otc.kyrrex.com/sign-in"
+        },
+        {
+          "title": "Liquidity HUB ",
+          "navlink": "/liquidity-hub/"
+        }
+      ]
+    },
+    {
+      "title": "Караоке"
+    },
+    {
+      "title": "Галерея"
+    },
+    {
+      "title": "Контакти"
+    }
+  ],
+  "mainPage": {
+    "slider": {
+      "title": "Princess Men′s Club ",
+      "firstDescription": "Эротический театр в центре Киева",
+      "secondDescription": "Экслюзивный формат отдыха в новом клубе на Печерске",
+      "thirdDescription": "Стать резидентом клуба и получи больше",
+      "thirdSubtitle": "*Карта резидента действует во всех клубах Princess"
+    },
+    "aboutClub": {
+      "title": "О клубе"
+    },
+    "allAllowBlock": {
+      "title": "У клубі можна все"
+    },
+    "gallery": {
+      "title": "Галерея"
+    },
+    "karaoke": {
+      "title": "Karaoke",
+      "subtitle": "Исптытайте новый формат отдыха"
+    },
+    "reviews": {
+      "title": "Более 3х лет радуем жителей и гостей столицы"
+    },
+    "commonReservedTable": {
+      "title": "Забронируйте стол прямо сейчас"
+    },
+    "aboutPrincess": {
+      "title": "Стрип клуб Princess men’s club в Киеве",
+      "description": "Princess men’s club – это премиальный стриптиз-клуб в самом центре столицы. \n\nНаш джентльмен клуб подойдет исключительно для мужчин, которые ценят женскую красоту. Мы отошли от стереотипов и создали совершенно новый формат стрип клуба. Это не просто стриптиз, это эротический театр с искусными постановками и великолепными танцовщицами. В джентльмен клубе вы увидите целое представление с множеством эротических сюрпризов, которое удовлетворит даже для самых избалованных гостей. Каждую ночь у вас есть возможность посетить Touch-шоу и дотронуться до роскошных девушек. При посещении нашего стрип бара, вас удивит абсолютно каждая деталь – начиная от продуманного профессиональными дизайнерами интерьера с зоной общего зала, приватными кабинками и заканчивая подбором напитков в карте нашего бара. Но в центре внимания гостей всегда остаются красивые,  "
+    }
+  },
+  "aboutClub_description": [
+    {
+      "title": "Уникальная шоу-программа каждый день"
+    },
+    {
+      "title": "Более 100 самых красивых девушек"
+    },
+    {
+      "title": "Закрытые VIP-локации & Караоке"
+    },
+    {
+      "title": "Авторская кухня и изысканный бар"
+    }
+  ],
+  "allAllowBlock_list": [
+    {
+      "title": "Общаться с танцовщицами"
+    },
+    {
+      "title": "Заказать приватный танец"
+    },
+    {
+      "title": "Спеть Караоке"
+    },
+    {
+      "title": "Пип-show"
+    },
+    {
+      "title": "Domination-шоу"
+    },
+    {
+      "title": "Touch-шоу"
+    },
+    {
+      "title": "Насладиться вкусом"
+    },
+    {
+      "title": "Шикарно поужинать"
+    }
+  ],
+  "mainPage_gallery_list": [
+    {
+      "title": "Дівчата"
+    },
+    {
+      "title": "Шоу-балет"
+    },
+    {
+      "title": "Інтер'єр"
+    }
+  ],
+  "mainPage__karaoke__list": [
+    {
+      "title": "Karaoke hall",
+      "description": "Lounge локация с караоке, кухней и баром для отдыха в приятной компании",
+      "linkText": "Подробнее",
+      "link": "/karaoke/"
+    },
+    {
+      "title": "Secret room",
+      "description": "Vip локация с караоке и удобной дизайнерской мебелью, приглушённым светом, экраном и пилоном для стриптиза для проведения ваших самых ярких приватных вечеринок",
+      "linkText": "Подробнее",
+      "link": "/secret-room/"
+    }
+  ],
+  "comments": [
+    {
+      "name": "Irene Bogdan",
+      "date": "28.12.2021",
+      "comment": "Место высокого уровня, моему мужу напомнило эпизод из фильма \"Джон Уик\". Мы получили большое эстетическое удовольствие. Балет великолепен, девочки красивые куклы! спасибо вам за красоту!",
+      "link": "https://goo.gl/maps/sjwRZ9phdXyuPJZ39"
+    },
+    {
+      "name": "Вячеслав Бельц",
+      "date": "28.12.2021",
+      "comment": "Definitely 5 stars !!! From the first visit my friends and I came to the conclusion that now we will be frequent guests here. Time flew by quickly.)) Especially in the company of such awesome babes! Administrators 5 out of 5 feel professional level! Directors keep it up! .Unambiguously one of the best establishments, so to speak with \"peppercorn\") Prosperity to you and see you.)",
+      "link": "https://goo.gl/maps/9NcGYKXWucCnfyv8A "
+    },
+    {
+      "name": "Виктор Сминов",
+      "date": "28.12.2021",
+      "comment": "Отличное место, искали бар, а наткнулись на первый в жизни стрип-бар, все девочки просто невероятной красоты, взял первый в жизни приват и был приятно удивлен) отдельное спасибо девочке Ясмин(ты супер).\nКальян и Виски тоже хороши)",
+      "link": "https://goo.gl/maps/2TVarWtfBUfmZeNAA"
+    },
+    {
+      "name": "Diptanil Sengupta",
+      "date": "28.11.2021",
+      "comment": "Before going to this club, I read in detail about the reviews and decided to drop in. My experience in brief:\n1. Of course, one should be aware of the fact that there is an entry fee and also you simply cannot order a Pepsi and stay there for 2 hours. You need to order as you are enjoying the show.\n2. I was there for 5 hours and during my stay not even a single performer bothered me / asked me for extra service / disturbed me for money etc., etc. They accepted money only from those who wanted to reward the performers.\n3. Finally, I spoke to one lady and I was genuinely overwhelmed by her nice, polite and humble behavior. In my personal opinion, after a point in time, good manners and behavior are also equally important.\n4. So, to conclude, this is indeed a perfect \"Gentlemen's Club\", literally !",
+      "link": "https://goo.gl/maps/H6PE5jwAVGL3Ku2EA."
+    },
+    {
+      "name": "Dariia Alekseevna",
+      "date": "01.07.2021",
+      "comment": "Добрый день, посетив ваш клуб один раз, мы попали в лёгкую зависимость\uD83D\uDE48\nПроехав к вам снова  350 км в одну сторону и вернулись через день ещё раз)))\nБез преувеличения вы Лучшие в Украине)))\nИнтерьер очень стильный, музыка Топ, девушки невероятно красивые и танцуют просто восхитительно, персоналу я готова отдельно петь диферамбы, все профессионалы своего дела, обслуживание на высшем уровне)))не знаю,что испытывают мужчины в подобных заведения, мой супруг был счастлив, а я получила невероятное эстетическое удовольствие, наслаждение))невероятные эмоции \uD83D\uDD25\nСпасибо вам, за ваш труд, вы Крутые \uD83D\uDC4A❤️\nЖелаю вам преданных и щедрых клиентов))\nДо скорых встреч",
+      "link": "https://goo.gl/maps/awz2CXoHZdWW9jvMA"
+    }
+  ],
+  "googleMaps": [
+    {
+      "title": "Princess Club",
+      "addressName": "на Крещатике",
+      "link": "https://www.google.com/",
+      "address": "Крещатик 14",
+      "phone": "+38 066 525 60 04",
+      "phoneLink": "tel:+380671588252",
+      "subtitleWorkTime": "Работаем без выходных",
+      "workTime": "с 20:00 по 06:00"
+    },
+    {
+      "title": "Princess Club Strip & Karaoke",
+      "addressName": "на Печерске",
+      "link": "https://www.google.com/",
+      "address": "Леси Украинки 34",
+      "phone": "+38 067 158 82 52",
+      "phoneLink": "tel:+380671588252",
+      "subtitleWorkTime": "Работаем без выходных",
+      "workTime": "с 20:00 по 06:00"
+    }
+  ],
+  "footerMain": {
+    "rightsBeforeDate": "Princess Men’s Club™ ",
+    "rightsAfterDate": "All rights reserved"
+  },
+  "footerNavBar": [
+    {
+      "title": "О нас",
+      "link": "/"
+    },
+    {
+      "title": "Членство в клубе",
+      "link": "/"
+    },
+    {
+      "title": "Караоке",
+      "link": "/"
+    },
+    {
+      "title": "Работа",
+      "url": "/"
+    },
+    {
+      "title": "День рождения",
+      "link": "/"
+    },
+    {
+      "title": "Мальчишник",
+      "link": "/"
+    },
+    {
+      "title": "Контакты",
+      "link": "/"
+    }
+  ]
 }
