@@ -7,18 +7,19 @@ import {useTranslation} from "react-i18next";
 import alarm from "../../assets/pictures/buttonPicAlarm.svg";
 import FooterBlock from "../../components/Footer/FooterBlock";
 import {telegram_bot} from "../../env";
-import {getInfoFromCms} from "../../api_requests";
+
+
 
 const ComingSoon = ({locale}) => {
     if (!locale) locale = "ru"
     const {t} = useTranslation();
-    const [allPhotos, setAllPhotos] = useState([]);
-    const [error, setError] = useState(false);
-    const [loading, setLoading] = useState(false);
-    useEffect(() => {
-        getInfoFromCms(`/gallery`, setAllPhotos, setError, setLoading);
-    },[])
-    if (loading || allPhotos.length === 0) return <div>Loading...</div>
+    // const [allPhotos, setAllPhotos] = useState([]);
+    // const [error, setError] = useState(false);
+    // const [loading, setLoading] = useState(false);
+    // useEffect(() => {
+    //     getInfoFromCms(`/gallery`, setAllPhotos, setError, setLoading);
+    // },[])
+    // if (loading || allPhotos.length === 0) return <div>Loading...</div>
     return (
         <div className={"comming__soon__wrapper"}>
             <Logo locale={locale} className={"comming__soon"}/>
@@ -38,8 +39,6 @@ const ComingSoon = ({locale}) => {
                 classNameButton={"comming__soon"}
             />
             <FooterBlock/>
-            <img src={allPhotos.kitchen[0].image.url} alt="all-photo"
-                 className="gallery__item__pic"/>
         </div>
     );
 };
