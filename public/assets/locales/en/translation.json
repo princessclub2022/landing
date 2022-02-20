@@ -17,7 +17,9 @@
     "reserveTableHeader": "Reserve",
     "call":"Call",
     "details": "Details",
-    "submit": "Book"
+    "moreDetails": "Details",
+    "submit": "Book",
+    "showMore": "Show more"
   },
   "social_buttons_title": "Follow the news",
   "footer": {
@@ -306,12 +308,10 @@
     }
   ],
   "gallery": {
-    "title": "Gallery Princess Men's Club"
+    "title": "Gallery Princess Men's Club",
+    "reservedTableBlock": "Book a table now"
   },
   "gallery__tabs": [
-    {
-      "tab": "All"
-    },
     {
       "tab": "Girls"
     },
@@ -320,6 +320,63 @@
     },
     {
       "tab": "Kitchen and bar"
+    },
+    {
+      "tab": "All"
+    }
+  ],
+  "pagesMenu": {
+    "Gallery": "Галерея",
+    "specialMenu": "Special menu",
+    "clubMember": "Членство в клубе"
+  },
+  "memberClubPage": {
+    "title": "Членство в клубе Princess men’s club",
+    "coloredTitle": "Princess men’s club",
+    "description": "Если вам пришелся по душе отдых в нашем клубе, вы можете воспользоваться премуществом программы лояльности, получив одну из VIP-карт.",
+    "formTitle": "Стать резидентом Princess Men’s Club",
+    "form": {
+      "name": "Имя",
+      "tel": "Телефон",
+      "email": "Email",
+      "tipeCard": "Тип карты",
+      "btn": "Подать заявку",
+      "optionsCardBlack":  "Black",
+      "optionsCardGold":  "Gold",
+      "optionsCardPlatinum":  "Platinum",
+      "subtitle": "Карта действует во всех клубах сети"
+    }
+  },
+  "memberClubPageOptions": [
+    {
+      "title": "Princess Black",
+      "subtitle": "единоразовая трата",
+      "from": "от",
+      "amount": "200",
+      "currency": "тыс грн",
+      "description": "<ul><li>Скидка 5% на бар, кухню и кальяны</li><li>Скидка 5% на корпоративные мероприятия, мальчи шники и дни рождения</li></ul>",
+      "btn_text": "Получить карту"
+    },
+    {
+      "title": "Princess Gold",
+      "subtitle": "общие траты за год",
+      "from": "от",
+      "amount": "200",
+      "currency": "тыс грн",
+      "description": "<ul><li>Скидка 10% на бар, кухню\nи кальяны</li><li>Скидка 10% на корпоративные мероприятия, мальчи шники\nи дни рождения</li><li>Персональный менеджер Telegram, Viber, WhatsApp</li></ul>",
+      "btn_text": "Получить карту",
+      "postText": "Карта является именной и не может быть передана другому человеку."
+    },
+    {
+      "title": "Princess Platinum ",
+      "subtitle": "общие траты за год",
+      "from": "от",
+      "amount": "200",
+      "currency": "тыс грн",
+      "description": "<ul><li>Скидка 15% на бар, кухню\nи кальяны</li><li>Скидка 15% на корпоративные мероприятия, мальчи шники\nи дни рождения</li><li>Персональный менеджер Telegram, Viber, WhatsApp</li><li>Подарок от девочки клуба при каждом посещении\n</li></ul>",
+      "btn_text": "Получить карту",
+      "postText": "Карта является именной и не может быть передана другому человеку.",
+      "postText2": "Уровень карты с Gold до Platinum повышается автоматически "
     }
   ]
 }

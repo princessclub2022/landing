@@ -7,6 +7,7 @@ import Header from "../components/Header/Header";
 import MainPage from "../pages/MainPage/MainPage";
 import ReserveTableForm from "../pages/ReserveTableForm/ReserveTableForm";
 import Gallery from "../pages/Gallery/Gallery";
+import MemberClub from "../pages/MemberClub/MemberClub";
 
 // const TradeView = React.lazy(() => import("../pages/TradeView/TradeView"));
 
@@ -61,10 +62,10 @@ const MainRoutes = (props) => {
                 <Route exact strict path={`/en/bachelor-party/`} render={() => <ReserveTableForm locale={locale}/>}/>
                 {/*Членство в клубе*/}
                 <Route exact strict path={`/chlenstvo-v-klube/`}
-                       render={() => <ReserveTableForm locale={locale}/>}/>
+                       render={() => <MemberClub locale={locale}/>}/>
                 <Route exact strict path={`/ua/chlenstvo-v-klubi/`}
-                       render={() => <ReserveTableForm locale={locale}/>}/>
-                <Route exact strict path={`/en/membership-card/`} render={() => <ReserveTableForm locale={locale}/>}/>
+                       render={() => <MemberClub locale={locale}/>}/>
+                <Route exact strict path={`/en/membership-card/`} render={() => <MemberClub locale={locale}/>}/>
                 {/*Караоке*/}
                 <Route exact strict path={locale === "ru" ? `/karaoke/` : `/${locale}/karaoke/`}
                        render={() => <ReserveTableForm locale={locale}/>}/>
@@ -72,12 +73,10 @@ const MainRoutes = (props) => {
                 <Route exact strict path={locale === "ru" ? `/about/` : `/${locale}/about/`}
                        render={() => <ReserveTableForm locale={locale}/>}/>
                 {/*<Route exact strict path={`/*`} render={() => <ComingSoon locale={locale}/>}/>*/}
-                princessmensclub.ua/galereya
-                princessmensclub.ua/en/gallery
-                princessmensclub.ua//ua/galereya
                 <Route exact strict path={`/galereya/`} component={Gallery}/>
                 <Route exact strict path={`/ua/galereya/`} component={Gallery}/>
                 <Route exact strict path={`/en/gallery/`} component={Gallery}/>
+
             </Switch>
         </>
     );

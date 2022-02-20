@@ -12,3 +12,12 @@ export const getInfoFromCms = (path, setInfo, setError, setLoading) => {
         return setError(e)
     })
 }
+export const getInfoFromCmsWithoutLoding = (path, setInfo, setError) => {
+    axios(`${CMS}${path}`).then((res) => {
+        setInfo(res.data)
+    }).catch(e => {
+        console.log(e)
+        return setError(e)
+    })
+}
+

@@ -8,7 +8,9 @@ import InfoBox from "../InfoBox";
 
 const Sidebar = ({history, pathname, locale, className, dropDown,showMenu}) => {
     const [menuIsOpen, setMenuIsOpen] = useState(false);
+    const [sideBarIsOpen, setSideBarIsOpen] = useState(false);
     const closeMenu = () => setMenuIsOpen(!menuIsOpen);
+    const closeSideBar = () => setSideBarIsOpen(!sideBarIsOpen);
     return (
         <div id="outer-container">
             <Menu
@@ -17,10 +19,13 @@ const Sidebar = ({history, pathname, locale, className, dropDown,showMenu}) => {
                 outerContainerId={"outer-container"}
                 width={'360px'}
                 // for width burger bars
+                isOpen={sideBarIsOpen}
+                onOpen={closeSideBar}
                 burgerBarClassName={"burger__bars token__page"}
             >
                 <Logo  className={"sidebar__logo"}/>
                 <NavBar className={"sidebar__logo"} dropClassName={"sideBar"}
+                        closeSideBar={closeSideBar}
                         // dropDown={dropDown}
                         // showMenu={showMenu}
                 />

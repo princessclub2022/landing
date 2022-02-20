@@ -8,7 +8,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
 import {initReactI18next} from "react-i18next";
 import NotFound from "./pages/NotFound/NotFound";
-
+import SimpleReactLightbox from 'simple-react-lightbox'
 
 const errorHandler = (error, errorInfo) => {
     console.log("logging", error, errorInfo)
@@ -32,7 +32,7 @@ i18n
         supportedLngs: ["en", "ru", "ua"],
         fallbackLng: ['ru'],
         detection: {
-            order: ['localStorage', 'path',  'navigator', 'cookie', 'subdomain'],
+            order: ['localStorage', 'path', 'navigator', 'cookie', 'subdomain'],
             // order: ['path', "querystring",'localStorage',  'navigator', 'cookie', 'subdomain'],
             caches: ['localStorage'],
             lookupFromPathIndex: 0,
@@ -44,16 +44,17 @@ i18n
     });
 
 
-
 const fallbackMarkup = (
     <div>Loading ...</div>
 )
 
 ReactDOM.render(
     <Suspense fallback={fallbackMarkup}>
-            <ErrorBoundary FallbackComponent={NotFound} onError={errorHandler}>
+        <ErrorBoundary FallbackComponent={NotFound} onError={errorHandler}>
+            <SimpleReactLightbox>
                 <App/>
-            </ErrorBoundary>
+            </SimpleReactLightbox>
+        </ErrorBoundary>
     </Suspense>,
     document.getElementById('root')
 );

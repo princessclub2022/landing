@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 import DropDownMenu from "./DropDownMenu";
 
 // const NavBar = ({locale, className = '',showMenuTwo, dropDown, dropDownTwo, showMenu}) => {
-const NavBar = ({locale, className = '', dropClassName="default"}) => {
+const NavBar = ({locale, className = '', dropClassName="default", closeSideBar}) => {
     const {t} = useTranslation();
     const [dropDown, setDropDown] = useState(false);
     const [dropDownTwo, setDropDownTwo] = useState(false);
@@ -23,6 +23,7 @@ const NavBar = ({locale, className = '', dropClassName="default"}) => {
                     {`${t("header_nav_bar.0.title")}`}
                     {dropDown ? <MdKeyboardArrowUp className={"drop__up"}/> : <MdKeyboardArrowDown/>}
                     {dropDown ? <DropDownMenu
+                        closeSideBar={closeSideBar}
                         drop={(t("header_nav_bar.0.dropDownMenu", {returnObjects: true}))}
                         className={`${dropClassName}_first`}
                         locale={locale}
@@ -30,11 +31,13 @@ const NavBar = ({locale, className = '', dropClassName="default"}) => {
                 </li>
                 <li className={`header__menu__li ${className}`}
                     onMouseEnter={showMenuTwo} onMouseLeave={showMenuTwo}
+                    onClick={() => closeSideBar()}
                     // onClick={() => showMenuTwo()}
                 >
                     {`${t("header_nav_bar.1.title")}`}
                     {dropDownTwo ? <MdKeyboardArrowUp className={"drop__up"}/> : <MdKeyboardArrowDown/>}
                     {dropDownTwo ? <DropDownMenu
+                        closeSideBar={closeSideBar}
                         className={`${dropClassName}_second`}
                         drop={(t("header_nav_bar.1.dropDownMenu", {returnObjects: true}))}
                         locale={locale}
@@ -42,7 +45,7 @@ const NavBar = ({locale, className = '', dropClassName="default"}) => {
                 </li>
                 <li className={`header__menu__li ${className}`}>
                     <Link to={`${locale !== "ru" ? `/${locale}` : ""}/karaoke/`}
-                          className={`navBar__item ${className}`}>
+                          className={`navBar__item ${className}`}    onClick={() => closeSideBar()}>
                         {`${t("header_nav_bar.2.title")}`}
                     </Link>
                 </li>
@@ -54,7 +57,7 @@ const NavBar = ({locale, className = '', dropClassName="default"}) => {
                 </li>
                 <li className={`header__menu__li ${className}`}>
                     <Link to={locale === "ru" ? t("header_nav_bar.4.link.ru") : locale === "ua" ? t("header_nav_bar.4.link.ua") : t("header_nav_bar.4.link.en")}
-                          className={`navBar__item ${className}`}>
+                          className={`navBar__item ${className}`}  onClick={() => closeSideBar()}>
                         {`${t("header_nav_bar.4.title")}`}
                     </Link>
                 </li>

@@ -59,7 +59,45 @@
 .separator.comming_soon {
   margin-top: 32px;
   margin-bottom: 32px;
-  @media(min-width: 768px) {
+  @media(min-width: 600px) {
     margin-bottom: 24px;
+  }
+}
+
+.simple__reserved__table__block {
+  background-color: $mainBackGroundColor;
+  padding: 100px 15px;
+  @media(min-width: 600px) {
+    background-color: $secondBackGroundColor;
+    padding: 0 0 100px 0;
+  }
+}
+.simple__reserved__table__block__container {
+  width: 312px;
+  margin: 0 auto;
+  @media(min-width: 600px) {
+    background-color: $mainBackGroundColor;
+    width: 600px;
+    padding: 100px 15px;
+    border-radius: 16px;
+  }
+  @media(min-width: 960px) {
+    width: 960px;
+    padding: 128px 0;
+  }
+}
+.simple__reserved__table__block__title {
+  @include fontsize-weight-height-align-mb-color(24px, 500, 30px, center, 24px, null);
+  @media(min-width: 960px) {
+    @include fontsize-weight-height-align-mb-color(36px, null, 44                                        px, center, 32px, null);
+  }
+}
+
+.main__button__wrapper.simple__reserved__table  {
+  display: grid;
+  justify-content: center;
+
+  & > button {
+    width: 282px;
   }
 }
