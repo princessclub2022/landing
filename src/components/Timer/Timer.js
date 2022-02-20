@@ -16,7 +16,7 @@ const Timer = ({className = ''}) => {
     let interval2;
 
     const startTimer = () => {
-        const finishUTC = new Date("March 4, 2022 00:00:00");
+        const finishUTC = new Date("March 5, 2022 00:00:00");
         interval = setTimeout(function TimeLogic() {
             const now = new Date();
             const nowUTC = new Date(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds());
