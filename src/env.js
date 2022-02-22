@@ -8,6 +8,6 @@
 
 export const facebook_link = "https://www.facebook.com/princess.mens.club.kiev/";
 export const telegram_link = "https://t.me/joinchat/RjgES96nVgWKdpIg";
-export const telegram_bot = "https://t.me/PrincessNewClubBot";
+export const telegram_bot = "https://bit.ly/3rCO61U";
 export const instagram_link = "https://www.instagram.com/princess.mens.club.kiev/";
 export const main_site = "https://princessclub.kiev.ua/";
