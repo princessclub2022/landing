@@ -3,17 +3,15 @@
 
 .reserved__table__page__wrapper {
   padding: 175px 0 100px;
-  //background:  center / cover no-repeat #03040E url("../../../");
+  height: 100vh;
+  background:  center / cover no-repeat #03040E url("../../../src/assets/pictures/booking.webp");
 }
+
 
 .reserved__table__page__container {
   width: 320px;
   margin: 0 auto;
-  //@media(min-width: 360px) {
-  //  width: 360px;
-  //}
   @media(min-width: 600px) {
-    //padding: 100px 0 49px;
     width: 600px;
   }
   @media(min-width: 960px) {
@@ -24,5 +22,9 @@
   }
 }
 .table__reserved__title {
-  @include fontsize-weight-height-align-mb-color(36px, 500, 43.57px, center, 24px, null);
+  @include fontsize-weight-height-align-mb-color(36px, 500, 43.57px, center, null, null);
+  @media(min-width: 600px) {
+    width: 530px;
+    margin: 0 auto;
+  }
 }

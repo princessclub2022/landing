@@ -69,7 +69,7 @@
   @if ($text-align) != null {
     text-align: $text-align;
   }
-  color: $mainTitleColor;
+
   @if ($margin-bottom) != null {
     margin-bottom: $margin-bottom;
   }

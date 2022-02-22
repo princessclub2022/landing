@@ -7,21 +7,23 @@ const RadioButtons = (props) => {
     return (
         <div className={`form__control ${props.className ? props.className : ""}`}>
             <label htmlFor={name}>{label}</label>
-            <Field name={name} {...rest} >
-                {
-                    ({field}) => {
-                        return options.map(option => {
-                            return (
-                                <React.Fragment key={option.key}>
-                                    <input type="radio" id={option.value} {...field} value={option.value}
-                                           checked={field.value === option.value}/>
-                                    <label htmlFor={option.value}>{option.key}</label>
-                                </React.Fragment>
-                            )
-                        })
+            <div>
+                <Field name={name} {...rest} >
+                    {
+                        ({field}) => {
+                            return options.map((option) => {
+                                return (
+                                    <div key={option.key}>
+                                        <input type="radio" id={option.value} {...field} value={option.value}
+                                               checked={field.value === option.value}/>
+                                        <label htmlFor={option.value}>{option.key}</label>
+                                    </div>
+                                )
+                            })
+                        }
                     }
-                }
-            </Field>
+                </Field>
+            </div>
             <ErrorMessage name={name} component={TextError} {...rest}/>
         </div>
     );

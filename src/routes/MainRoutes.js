@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Redirect, Route, Switch} from "react-router-dom";
 import {useErrorHandler} from "react-error-boundary";
 import i18n from "i18next";
@@ -27,6 +27,9 @@ const MainRoutes = (props) => {
     //     handleError(error)
     //     return <ErrorPage locale={locale}/>
     // }
+
+
+
 
     return (
         <>

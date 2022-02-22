@@ -5,7 +5,12 @@ import * as Yup from "yup";
 import FormikControl from "./FormikControl";
 import MainButton from "../Buttons/MainButton/MainButton";
 import {formatText} from "../../data/landing-variables";
-// import "./MainForm.scss";
+import axios from "axios";
+import {CMS, TURBO_SMS_BASE_URL, TURBO_SMS_TOKEN} from "../../env";
+import "./MainForm.scss";
+import Modal from "../Modal/Modal";
+import SuccessModal from "../Modal/SuccessModal";
+import ErrorModal from "../Modal/ErrorModal";
 // import {formatText} from "../../utils_functions";
 // import Modal from "../Modal/Modal";
 // import SuccessModal from "../../pages/HelpMainForm/SuccessModal";
@@ -14,14 +19,13 @@ import {formatText} from "../../data/landing-variables";
 const INITIAL_FORM_STATE = {
     name: '',
     phone: '',
-    timeRadio: '',
-    clubRadio: '',
-    id: ''
+    timeRadio: ``,
+    clubRadio: ''
 }
 
 
 const timeOptions = [
-    {key: "20:00", value: "20:00"},
+    {key: "20:00", value: "20:00", checked: true},
     {key: "20:30", value: "20:30"},
     {key: "21:00", value: "21:00"},
     {key: "21:30", value: "21:30"},
@@ -35,7 +39,7 @@ const timeOptions = [
     {key: "01:30", value: "01:30"}
 ]
 const clubsOptions = [
-    {key: "Princess Men’s Club (ул. Крещатик 14)", value: "Princess Men’s Club (ул. Крещатик 14)"},
+    {key: "Princess Men’s Club (ул. Крещатик 14)", value: "Princess Men’s Club (ул. Крещатик 14)", checked: true},
     {
         key: "Princess Men's Club Strip & Karaoke (бул. Леси Украинки 34)",
         value: "Princess Men's Club Strip & Karaoke (бул. Леси Украинки 34)"
@@ -46,52 +50,39 @@ const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2
 
 const MainForm = ({relatedQuestion}) => {
     const {t} = useTranslation();
-    // const visitor_uid = window.AMOPIXEL_IDENTIFIER.getVisitorUid() ;
+    const locale = localStorage.getItem("i18nextLng");
+
     const [toggleModal, setToggleModal] = useState(false);
     const [successSubmit, setSuccessSubmit] = useState(false);
     const [onErrorModalInfo, setOnErrorModalInfo] = useState('');
     const openModal = () => setToggleModal(!toggleModal);
-    let visitor_uid = window.AMOPIXEL_IDENTIFIER.getVisitorUid ( ) ;
-    console.log(visitor_uid);
+
+    useEffect(() => {
+        const defaultValue = document.querySelector(".form__control.timeRadio_input > div > div > input")
+        // defaultValue.setAttributeNode("checked")
+    },[])
+
     const validate = Yup.object({
-        name: Yup.string(),
-        // .required(`${t("reservedTablePage.formError.requered")}`),
-        phone: Yup.string(),
-        // .min(8, `${t("reservedTablePage.formError.phone")}` )
-        // .matches(phoneRegExp, `${t("reservedTablePage.formError.phone")}`)
-        // .required(`${t("reservedTablePage.formError.requered")}`),
-        timeRadio: Yup.string(),
-        // .required(`${t("reservedTablePage.formError.requered")}`),
-        clubRadio: Yup.string(),
-        // .required(`${t("reservedTablePage.formError.requered")}`),
+        name: Yup.string()
+            .required(`${t("reservedTablePage.formError.requered")}`),
+        phone: Yup.string()
+            .min(8, `${t("reservedTablePage.formError.phone")}`)
+            .matches(phoneRegExp, `${t("reservedTablePage.formError.phone")}`)
+            .required(`${t("reservedTablePage.formError.requered")}`),
+        timeRadio: Yup.string()
+            .required(`${t("reservedTablePage.formError.requered")}`),
+        clubRadio: Yup.string()
+            .required(`${t("reservedTablePage.formError.requered")}`),
     })
-    // const visitor_uid = AMOPIXEL_IDENTIFIER.getVisitorUid() ;
-    // console.log(visitor_uid);
-    //
 
 
-    // useEffect(() => {
-    //
-    //     // window.AMOPIXEL_IDENTIFIER_PARAMS = window.AMOPIXEL_IDENTIFIER_PARAMS || {};
-    //     // window.AMOPIXEL_IDENTIFIER_PARAMS.onload = () => {
-    //     //     // const visitor_uid = pixel_identifier.getVisitorUid(); // Получаем visitor_uid
-    //     //     let visitor_uid = window.AMOPIXEL_IDENTIFIER.getVisitorUid ( ) ;
-    //     //     console.log(visitor_uid);
-    //         if (visitor_uid) {
-    //             // Записываем его в скрытое поле формы 'visitor_uid'
-    //             console.log(document.getElementById('visitor_uid'));
-    //             document.getElementById('visitor_uid').value = visitor_uid;
-    //         }
-    //     // };
-    // }, [])
-
-    // const handleSubmit = (values) => {
-    //     console.log("values", values);
-    //     // let formElement = document.querySelector("Form");
-    //     // console.log(formElement);
-    //     // const formData = new FormData(formElement)
-    //     // console.log("formData", formData);
-    // }
+    const handleSubmit = (values) => {
+        //     console.log("values", values);
+        //     // let formElement = document.querySelector("Form");
+        //     // console.log(formElement);
+        //     // const formData = new FormData(formElement)
+        //     // console.log("formData", formData);
+    }
 
     return (
         <>
@@ -102,19 +93,52 @@ const MainForm = ({relatedQuestion}) => {
                 validationSchema={validate}
                 onSubmit={(values, onSubmitProps) => {
                     console.log(values);
-                    document.getElementById('visitor_uid')
-                    axios.post
-                    // onSubmitProps.setSubmitting(true);
-                    // handleSubmit(values);
-                    // openModal();
-                    // onSubmitProps.setSubmitting(false);
-                    // onSubmitProps.resetForm();\
-                    if (visitor_uid) {
-                        // Записываем его в скрытое поле формы 'visitor_uid'
-                        console.log(document.getElementById('visitor_uid'));
-                        document.getElementById('visitor_uid').value = visitor_uid;
+                    onSubmitProps.setSubmitting(true);
+                    const data = {
+                        name: `${values.name}`,
+                        phone: `${values.phone}`,
+                        email: `${values.phone}`,
+                        time: `${values.timeRadio}`,
+                        club: `${values.clubRadio}`
                     }
+                    openModal()
+                    // axios({
+                    //     method: 'POST',
+                    //     url: `${CMS}/emails`,
+                    //     data: data,
+                    //     headers: {
+                    //         'Content-Type': 'application/json',
+                    //     },
+                    // })
+                    //     .then((responce) => {
+                    //         console.log(responce);
+                    //         handleSubmit(values);
+                    //         openModal();
+                    //         onSubmitProps.resetForm();
+                    //     })
+                    //     .catch((error) => {
+                    //
+                    //     })
+                    axios({
+                        method: 'POST',
+                        url: `${TURBO_SMS_BASE_URL}/message/ping.json`,
+                        // Authorization: `${TURBO_SMS_TOKEN}`,
+                        headers: {
+                            "Authorization": `${TURBO_SMS_TOKEN}`,
+                            'Content-Type': 'Content-Type: application/json',
+                        },
+                    })
+                        .then((responce) => {
+                            console.log(responce);
+                            handleSubmit(values);
+                            openModal();
+                            onSubmitProps.resetForm();
+                        })
+                        .catch((error) => {
 
+                        })
+                    onSubmitProps.setSubmitting(false);
+                    onSubmitProps.resetForm();
                 }}>
                 {({errors, setFieldValue, touched}) => (
                     <Form className={"main__form"}>
@@ -124,23 +148,25 @@ const MainForm = ({relatedQuestion}) => {
                                     <div className="form__grid double__columns">
                                         <FormikControl
                                             control="input"
-                                            // type="text"
+                                            type="text"
                                             label={`${t("reservedTablePage.form.name")}`}
                                             name="name"
-                                            // placeholder={`${t("reservedTablePage.form.name_placeholder")}`}
+                                            placeholder={`${t("reservedTablePage.form.name_placeholder")}`}
                                             className={"name_input"}
                                             picture="true"
                                             errors={errors}
+                                            autoComplete="off"
                                         />
                                         <FormikControl
                                             control="input"
                                             // type="text"
                                             label={`${t("reservedTablePage.form.tel")}`}
                                             name="phone"
-                                            // placeholder={`${t("reservedTablePage.form.tel_placeholder")}`}
+                                            placeholder={`${t("reservedTablePage.form.tel_placeholder")}`}
                                             className={"phone_input"}
                                             picture="true"
                                             errors={errors}
+                                            autoComplete="off"
                                         />
                                     </div>
                                     <FormikControl
@@ -163,39 +189,31 @@ const MainForm = ({relatedQuestion}) => {
                                     />
                                 </div>
                                 <MainButton
-                                    classNameButton={"main__form"}
+                                    classNameButton={"main__form__btn"}
                                     btnText={t("buttons.submit")}
                                     type={"submit"}
                                     // disabled={Object.keys(errors).length !== 0 || errors.file}
                                 />
-                                {/*<FormikControl*/}
-                                {/*    control="text"*/}
-                                {/*    label={""}*/}
-                                {/*    name="id"*/}
-                                {/*    id={"visitor_uid"}*/}
-                                {/*    errors={errors}*/}
-                                {/*/>*/}
-                                <input type="text" value={visitor_uid}/>
                             </div>
                         </div>
                     </Form>
                 )}
             </Formik>
             <>
-                {/*{toggleModal ? <Modal*/}
-                {/*        className={"main_form"}*/}
-                {/*        active={toggleModal}*/}
-                {/*        setActive={setToggleModal}*/}
-                {/*        onClose={() => setToggleModal(false)}*/}
-                {/*    >*/}
-                {/*        <>{successSubmit ? <SuccessModal openModal={openModal}/> :*/}
-                {/*            <>*/}
-                {/*                <ErrorModal openModal={openModal} onErrorModalInfo={onErrorModalInfo}/>*/}
-                {/*                /!*<SuccessModal openModal={openModal}/>*!/*/}
-                {/*            </>}*/}
-                {/*        </>*/}
-                {/*    </Modal>*/}
-                {/*    : null}*/}
+                {toggleModal ? <Modal
+                        className={"booking__form"}
+                        active={toggleModal}
+                        setActive={setToggleModal}
+                        onClose={() => setToggleModal(false)}
+                    >
+                        <>{successSubmit ? <SuccessModal openModal={openModal}/> :
+                            <>
+                                <ErrorModal openModal={openModal} onErrorModalInfo={onErrorModalInfo}/>
+                                {/*<SuccessModal openModal={openModal}/>*/}
+                            </>}
+                        </>
+                    </Modal>
+                    : null}
             </>
         </>
     );

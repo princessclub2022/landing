@@ -6,14 +6,14 @@ import "./ReserveTableForm.scss";
 const ReserveTableForm = () => {
     const {t} = useTranslation();
     return (
-        <div className={"reserved__table__page__wrapper"}>
-            <div className={"reserved__table__page__container"}>
-                <h1 className="table__reserved__title">{t("reservedTablePage.title")}</h1>
-                <div className="form__wrap">
-                    <MainForm/>
-                </div>
+            <div className={"reserved__table__page__wrapper"}>
+                    <div className={"reserved__table__page__container"}>
+                        <h1 className="table__reserved__title">{t("reservedTablePage.title")}</h1>
+                        <div className="form__wrap">
+                            <MainForm/>
+                        </div>
+                    </div>
             </div>
-        </div>
     );
 };
 

@@ -16,3 +16,5 @@ export const telegram_link = "https://t.me/joinchat/RjgES96nVgWKdpIg";
 export const telegram_bot = "https://bit.ly/3rCO61U";
 export const instagram_link = "https://www.instagram.com/princess.mens.club.kiev/";
 export const main_site = "https://princessclub.kiev.ua/";
+export const TURBO_SMS_TOKEN = "ab2c326c81ccd98b7ca537b0ce8e2210465f1f5b";
+export const TURBO_SMS_BASE_URL= "https://api.turbosms.ua/";

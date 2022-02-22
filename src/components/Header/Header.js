@@ -35,7 +35,7 @@ const Header = ({locale}) => {
     return (
         <div className={`header__wrapper ${headerColor ? "header__active" : ""}`}>
             <div className="header__container">
-                <NavBar locale={locale} dropClassName={"header"}/>
+                <NavBar locale={locale} dropClassName={"header"} tablet={tablet}/>
                 <Logo locale={locale}/>
                 <div className="info__header__wrap">
                     <MainButton

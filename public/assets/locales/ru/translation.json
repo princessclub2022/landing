@@ -290,7 +290,7 @@
       "name": "Имя",
       "name_placeholder": "Введите ваше имя",
       "tel": "Телефон",
-      "tel_placeholder": "Введите номер телефона +380XX-XXX-XX-XX",
+      "tel_placeholder": "Введите номер телефона",
       "time_placeholder": "Выберите удобное время",
       "club_placeholder": "Выберите клуб",
       "club_one": "Princess Men’s Club (ул. Крещатик 14)",

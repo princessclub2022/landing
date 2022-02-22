@@ -5,19 +5,18 @@ import "./NavBar.scss";
 import {Link} from "react-router-dom";
 import DropDownMenu from "./DropDownMenu";
 
-// const NavBar = ({locale, className = '',showMenuTwo, dropDown, dropDownTwo, showMenu}) => {
-const NavBar = ({locale, className = '', dropClassName="default", closeSideBar}) => {
+const NavBar = ({locale, className = '', dropClassName="default", tablet, closeSideBar}) => {
     const {t} = useTranslation();
     const [dropDown, setDropDown] = useState(false);
     const [dropDownTwo, setDropDownTwo] = useState(false);
 
-    const showMenu = () => {setDropDown(!dropDown)};
-    const showMenuTwo = () => {setDropDownTwo(!dropDownTwo)};
+    const showMenu = () => setDropDown(!dropDown);
+    const showMenuTwo = () => setDropDownTwo(!dropDownTwo);
     return (
         <div className={`header__navbar ${className}`}>
             <ul className={`header__navbar__list ${className}`}>
                 <li className={`header__menu__li ${className}`}
-                    onMouseEnter={showMenu} onMouseLeave={showMenu}
+                    onMouseEnter={tablet ? showMenu : () => {}} onMouseLeave={tablet ? showMenu: () => {}}
                     onClick={showMenu}
                 >
                     {`${t("header_nav_bar.0.title")}`}
@@ -30,9 +29,8 @@ const NavBar = ({locale, className = '', dropClassName="default", closeSideBar})
                     /> : null}
                 </li>
                 <li className={`header__menu__li ${className}`}
-                    onMouseEnter={showMenuTwo} onMouseLeave={showMenuTwo}
-                    onClick={() => closeSideBar()}
-                    // onClick={() => showMenuTwo()}
+                    onMouseEnter={tablet ? showMenuTwo : () => {}} onMouseLeave={tablet ? showMenuTwo: () => {}}
+                    onClick={() => showMenuTwo()}
                 >
                     {`${t("header_nav_bar.1.title")}`}
                     {dropDownTwo ? <MdKeyboardArrowUp className={"drop__up"}/> : <MdKeyboardArrowDown/>}
@@ -45,19 +43,19 @@ const NavBar = ({locale, className = '', dropClassName="default", closeSideBar})
                 </li>
                 <li className={`header__menu__li ${className}`}>
                     <Link to={`${locale !== "ru" ? `/${locale}` : ""}/karaoke/`}
-                          className={`navBar__item ${className}`}    onClick={() => closeSideBar()}>
+                          className={`navBar__item ${className}`}    onClick={closeSideBar}>
                         {`${t("header_nav_bar.2.title")}`}
                     </Link>
                 </li>
                 <li className={`header__menu__li ${className}`}>
                     <Link to={locale === "ru" ? t("header_nav_bar.3.link.ru") : locale === "ua" ? t("header_nav_bar.3.link.ua") : t("header_nav_bar.3.link.en")}
-                          className={`navBar__item ${className}`}>
+                          className={`navBar__item ${className}`} onClick={closeSideBar}>
                         {`${t("header_nav_bar.3.title")}`}
                     </Link>
                 </li>
                 <li className={`header__menu__li ${className}`}>
                     <Link to={locale === "ru" ? t("header_nav_bar.4.link.ru") : locale === "ua" ? t("header_nav_bar.4.link.ua") : t("header_nav_bar.4.link.en")}
-                          className={`navBar__item ${className}`}  onClick={() => closeSideBar()}>
+                          className={`navBar__item ${className}`}  onClick={closeSideBar}>
                         {`${t("header_nav_bar.4.title")}`}
                     </Link>
                 </li>

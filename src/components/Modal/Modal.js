@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Modal.scss";
+// import "./Modal.scss";
 
 const Modal = ({className = '', active, setActive, children, layer}) => {
     return (
@@ -7,9 +7,7 @@ const Modal = ({className = '', active, setActive, children, layer}) => {
              onClick={() => setActive(false)}>
             <div className={active ? `modal__content__block active ${className}` : `modal__content__block ${className}`}
                  onClick={e => e.stopPropagation()}>
-                {layer ? <div className={`modal__content__inner__block ${className}`}>
-                    {children}
-                </div> : children}
+                {children}
             </div>
         </div>
     );

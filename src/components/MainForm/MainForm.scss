@@ -1,56 +1,136 @@
 @import "../../vars";
 @import "../../Mixins";
 
-.form_grid_container {
-  @media(min-width: 1000px) {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 94px;
-  }
-}
-
-.main__button__wrapper.main__form__button > button > p {
-  @media(min-width: 1000px) {
-    padding: 15px 24px;
-  }
-}
-
-.form__grid {
-  @media(min-width: 1000px) {
-    //width: 300px;
-    height: fit-content;
-    &.double__columns {
-      display: grid;
-      grid-template-columns: 300px 300px;
-      gap: 30px;
-    }
-  }
-  @media(min-width: 1280px) {
-    &.double__columns__wrapper {
-      width: 100%;
- display: grid;
-      grid-template-columns: auto 392px;
-      gap: 57px;
-    }
-  }
+.form__control > input::placeholder {
+  color: $placeholder;
 
 }
 
-.form__main__image {
-  width: 237px;
-  display: block;
-  margin: 30px auto;
-  &.desktop__form__pic {
-    display: none;
+.main__form {
+  width: 316px;
+  margin: 16px auto 0;
+  @media(min-width: 600px) {
+    width: 600px;
+    //& > .form__control {
+    //  width: 280px;
+    //}
   }
-  @media(min-width: 1000px) {
-    margin: unset;
+}
+
+.form__grid.double__columns {
+  @media(min-width: 600px) {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
   }
-  @media(min-width: 1280px) {
-   display: none;
-    &.desktop__form__pic {
-      display: block;
-      width: 392px;
+}
+
+
+.form__control {
+  display: grid;
+  @media(min-width: 600px) {
+    width: 100%;
+  }
+}
+
+.form__control label {
+  @include fontTitle-size-weight-height-textalign-mb(14px, null, 17px, left, 8px);
+  margin-left: 5px;
+  margin-top: 24px;
+}
+
+.form__control.clubRadio_input > div > div > label {
+  margin-top: unset;
+}
+
+.form__control.name_input > input, .form__control.phone_input > input, .form__control.timeRadio_input > div, .form__control.clubRadio_input > div {
+  background: linear-gradient(110.72deg, rgba(39, 44, 92, 0.36) 1.21%, rgba(39, 44, 92, 0.06) 100%);
+  opacity: 2;
+  backdrop-filter: blur(11px);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid transparent;
+
+}
+
+.form__control.name_input > input, .form__control.phone_input > input {
+  height: 64px;
+}
+
+.form__control.timeRadio_input > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 33px;
+  grid-row-gap: 24px;
+  justify-items: center;
+  @media(min-width: 600px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.form__control.clubRadio_input > div {
+  display: grid;
+  gap: 24px;
+  align-items: center;
+  padding: 24px 20px;
+
+  & > div {
+    display: flex;
+
+    & > label {
+      margin-left: 8px;
+      @include fontTitle-size-weight-height-textalign-mb(14px, null, 17px, left, null);
     }
+  }
+}
+
+input[type='radio']:after {
+  width: 9px;
+  height: 9px;
+  border-radius: 15px;
+  top: 1px;
+  left: 0;
+  position: relative;
+  background-color: transparent;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #474A68;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+input[type='radio']:checked:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 15px;
+  top: 1px;
+  left: 0;
+  position: relative;
+  background-color: #ffa500;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #474A68;
+}
+
+input[type="radio"] {
+  //position: absolute;
+  visibility: hidden;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.main__button__wrapper.main__form__btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+
+  & > button {
+    width: 282px;
   }
 }

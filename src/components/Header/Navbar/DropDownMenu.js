@@ -10,9 +10,9 @@ const DropDownMenu = ({drop, locale, className='', closeSideBar }) => {
                         <>
                             {item.link ?
                                 <Link to={locale === "ru" ? item.link.ru : locale === "ua" ? item.link.ua : item.link.en}
-                                      className={`drop_element ${className}`} onClick={() => closeSideBar()}>
-                                    {item.title}
-                                </Link> : null}
+                                       className={`drop_element ${className}`} onClick={closeSideBar}>
+                                     {item.title}
+                                 </Link> : null}
                             {item.url ?
                                 <a href={item.url}
                                    target="_blank" rel="noreferrer"

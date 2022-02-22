@@ -14,7 +14,8 @@ const options = {
     },
     buttons: {
         // backgroundColor: "#1b5245",
-        iconColor: "#272C5C",
+        iconColor: "#5c62a0",
+        // iconColor: "#272C5C",
         // iconColor: "#E89C17",
         backgroundColor: 'transparent',
         iconPadding: '10px',
