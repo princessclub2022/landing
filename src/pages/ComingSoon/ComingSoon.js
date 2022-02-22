@@ -40,24 +40,6 @@ const ComingSoon = ({locale}) => {
                     picture={alarm}
                     btnText={t("buttons.remind")}
                     classNameButton={"comming__soon"}
-
-                    onClick={() => {
-                        axios({
-                            method: 'POST',
-                            url: `https://api.turbosms.ua/message/send.json?token=ab2c326c81ccd98b7ca537b0ce8e2210465f1f5b`,
-                            headers: {
-                                // "Authorization": `Basic ab2c326c81ccd98b7ca537b0ce8e2210465f1f5b`,
-                                // 'Content-Type': 'application/x-www-form-urlencoded',
-                                'Content-Type': 'Content-Type: application/json',
-                            },
-                        })
-                            .then((responce) => {
-                                console.log(responce);
-                            })
-                            .catch((error) => {
-                                console.log(error);
-                            })
-                    }}
                 />
                 <FooterBlock/>
             </div>
