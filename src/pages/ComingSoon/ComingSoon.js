@@ -43,7 +43,7 @@ const ComingSoon = ({locale}) => {
 
                     onClick={() => {
                         axios({
-                            method: 'GET',
+                            method: 'POST',
                             url: `https://api.turbosms.ua/message/send.json?token=ab2c326c81ccd98b7ca537b0ce8e2210465f1f5b`,
                             headers: {
                                 // "Authorization": `Basic ab2c326c81ccd98b7ca537b0ce8e2210465f1f5b`,
